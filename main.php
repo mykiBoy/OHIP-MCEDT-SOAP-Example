@@ -11,6 +11,8 @@ $method = "info";
 $claimfile = 'Claim_File.txt';
 $resourceID = "83351";
 
+// replace with your own conformance testing credentials
+// scroll down to replace conformance testing key further down the code base
 global $MOH_ID, $username, $password;
 $MOH_ID = '621300';
 $username = 'confsu+427@gmail.com';
@@ -27,8 +29,10 @@ openssl_pkcs12_read($pkcs12, $pkcs12Info, 'changeit');
 // load the private key
 $privatekey = $pkcs12Info['pkey'];
 
-
+// in replit functions can be collapsed. collapsing all functions will help you get a sense of the structure.
+// first a number of functions defined to build different parts of the xml request. then all the parts are put together in loadxmltemplate()
 function loadbody() {
+  // must declare var global to be able to use global var from outside the function
   global $method, $claimfile, $resourceID;
   switch ($method) {
     case 'getTypeList':
@@ -122,44 +126,49 @@ function loadtimestamp() {
   $secondTimestampStr = $secondTimestamp->format('Y-m-d\TH:i:s.v\Z');
 
 $timestamp = <<<EOT
-<wsu:Timestamp wsu:Id="TS-1">
-<wsu:Created>$firstTimestampStr</wsu:Created>
-<wsu:Expires>$secondTimestampStr</wsu:Expires>
-</wsu:Timestamp>
+  <wsu:Timestamp wsu:Id="TS-1">
+    <wsu:Created>$firstTimestampStr</wsu:Created>
+    <wsu:Expires>$secondTimestampStr</wsu:Expires>
+  </wsu:Timestamp>
 EOT;
   return $timestamp;
+}
+function loadUsernameToken($username,$password) {
+$usernameToken = <<<EOT
+  <wsse:UsernameToken wsu:Id="UsernameToken-2">
+      <wsse:Username>$username</wsse:Username>
+      <wsse:Password 
+      Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">$password</wsse:Password>
+  </wsse:UsernameToken>
+EOT;
+return $usernameToken;
+}
+function loadIDP($MOH_ID) {
+//IDP model is used, not MSA model. reference moh-tech-spec-electronic-business-services-en-2023-06-12.pdf page 10
+//The trusted external identity provider is referring to GoSecure at https://www.edt.health.gov.on.ca All doctors in Ontario get a username and password to GoSecure when they get licensed. Thus credentials to logging into GoSecure is considered high trust and a user there has rights to access patient health information.
+$IDP = <<<EOT
+  <idp:IDP wsu:Id="id-3">
+    <ServiceUserMUID>$MOH_ID</ServiceUserMUID>
+  </idp:IDP>
+EOT;
+//per FAQ word document provided by MOH, serviceUserMUID is the same as MOH ID
+  return $IDP;
 }
 function loadEBS() {
 // generate uuid without external library because my server doesn't have composer
 $uuid = vsprintf( '%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex(random_bytes(16)), 4) );
 
 // hardcode conformance key here, as it will be permanent
+// auditId is an arbitrary random unique ID sent with each request to identify each request. To pass ministry of health's conformance testing you must prove you can receive correct responses from the web service and the government team can verify against server log that you indeed sent the correct request identified by the AuditId.
 $EBS = <<<EOT
-<ebs:EBS wsu:Id="id-4">
-<SoftwareConformanceKey>da3c7d46-42b9-4cd5-8485-8580e3a39593</SoftwareConformanceKey>
-<AuditId>$uuid</AuditId>
-</ebs:EBS>
+  <ebs:EBS wsu:Id="id-4">
+      <SoftwareConformanceKey>da3c7d46-42b9-4cd5-8485-8580e3a39593</SoftwareConformanceKey>
+      <AuditId>$uuid</AuditId>
+  </ebs:EBS>
 EOT;
-  return $EBS;  //what's AuditID???
+  return $EBS;
 }
-function loadIDP($MOH_ID) {
-$IDP = <<<EOT
-<idp:IDP wsu:Id="id-3">
-<ServiceUserMUID>$MOH_ID</ServiceUserMUID>
-</idp:IDP>
-EOT;
-  return $IDP;
-}
-function loadUsernameToken($username,$password) {
-$usernameToken = <<<EOT
-<wsse:UsernameToken wsu:Id="UsernameToken-2">
-<wsse:Username>$username</wsse:Username>
-<wsse:Password 
-Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">$password</wsse:Password>
-</wsse:UsernameToken>
-EOT;
-return $usernameToken;
-}
+
 // given xml input, digestxml will canonicalize xml then hash it with SHA256, returning a hash value as digest string
 function digestxml($xml) {
   // Create a DOMDocument
@@ -186,96 +195,99 @@ function loadxmltemplate() {
 $root_namespaces = <<<EOT
  xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ebs="http://ebs.health.ontario.ca/" xmlns:edt="http://edt.health.ontario.ca/" xmlns:idp="http://idp.ebs.health.ontario.ca/" xmlns:msa="http://msa.ebs.health.ontario.ca/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#" xmlns:inc="http://www.w3.org/2004/08/xop/include"
 EOT;
+  
+// insert namespace definition from all parent nodes ($root_namespaces) into the xml part to be canonicalized. this is required, otherwise wsu or soapenv namespace would be undefined.
 
-// must declare var global to be able to use global var from outside the function
-// global $healthcard,$versionCode,$serviceCode;//should be attachment???
+$timestamp = loadtimestamp();
+$modtimestamp = substr_replace($timestamp, $root_namespaces, strpos($timestamp, '<wsu:Timestamp') + strlen('<wsu:Timestamp'), 0);
+// echo $modtimestamp."\n\n"; //for debugging
+$digestvalue1 = digestxml($modtimestamp);
+// echo $digestvalue1."\n\n"; //for debugging
+
+global $username,$password;
+$usernameToken = loadUsernameToken($username,$password);
+$modusernameToken = substr_replace($usernameToken, $root_namespaces, strpos($usernameToken, '<wsse:UsernameToken') + strlen('<wsse:UsernameToken'), 0);
+$digestvalue2 = digestxml($modusernameToken);
+
+global $MOH_ID;
+$IDP = loadIDP($MOH_ID);
+$modifiedIDP = substr_replace($IDP, $root_namespaces, strpos($IDP, '<idp:IDP') + strlen('<idp:IDP'), 0);
+$digestvalue3 = digestxml($modifiedIDP);
+
+$EBS = loadEBS();
+$modifiedEBS = substr_replace($EBS, $root_namespaces, strpos($EBS, '<ebs:EBS') + strlen('<ebs:EBS'), 0);
+$digestvalue4 = digestxml($modifiedEBS);
+
 $body = loadbody();
-// insert namespace definition from all parent nodes into the xml part to be canonicalized. this is required, otherwise soapenv namespace would be undefined.
 $modifiedbody = substr_replace($body, $root_namespaces, strpos($body, '<soapenv:Body') + strlen('<soapenv:Body'), 0);
 // echo $body."\n\n"; //for debugging
 $digestvalue5 = digestxml($modifiedbody);
 // echo $digestvalue5."\n\n"; //for debugging
 
-$timestamp = loadtimestamp();
-$modtimestamp = substr_replace($timestamp, $root_namespaces, strpos($timestamp, '<wsu:Timestamp') + strlen('<wsu:Timestamp'), 0);
-// echo $modtimestamp."\n\n"; //for debugging
-$digestvalue3 = digestxml($modtimestamp);
-// echo $digestvalue3."\n\n"; //for debugging
-
-$EBS = loadEBS();
-$modifiedEBS = substr_replace($EBS, $root_namespaces, strpos($EBS, '<ebs:EBS') + strlen('<ebs:EBS'), 0);
-$digestvalue1 = digestxml($modifiedEBS);
-
-global $MOH_ID;
-$IDP = loadIDP($MOH_ID);
-$modifiedIDP = substr_replace($IDP, $root_namespaces, strpos($IDP, '<idp:IDP') + strlen('<idp:IDP'), 0);
-$digestvalue2 = digestxml($modifiedIDP);
-
-global $username,$password;
-$usernameToken = loadUsernameToken($username,$password);
-$modusernameToken = substr_replace($usernameToken, $root_namespaces, strpos($usernameToken, '<wsse:UsernameToken') + strlen('<wsse:UsernameToken'), 0);
-$digestvalue4 = digestxml($modusernameToken);
-
-
 $signedInfo = <<<EOT
 <ds:SignedInfo>
-<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
-<ec:InclusiveNamespaces PrefixList="ebs edt idp msa soapenv wsu"
-xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
-</ds:CanonicalizationMethod>
-<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
-<ds:Reference URI="#UsernameToken-2">
-<ds:Transforms>
-<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
-<ec:InclusiveNamespaces PrefixList="wsse ebs edt idp msa soapenv"
-xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
-</ds:Transform>
-</ds:Transforms>
-<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>$digestvalue5</ds:DigestValue>
-</ds:Reference>
-<ds:Reference URI="#TS-1">
-<ds:Transforms>
-<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
-<ec:InclusiveNamespaces PrefixList="ebs edt idp msa"
-xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
-</ds:Transform>
-</ds:Transforms>
-<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>$digestvalue1</ds:DigestValue>
-</ds:Reference>
-<ds:Reference URI="#id-3">
-<ds:Transforms>
-<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
-<ec:InclusiveNamespaces PrefixList="ebs edt msa soapenv"
-xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
-</ds:Transform>
-</ds:Transforms>
-<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>$digestvalue2</ds:DigestValue>
-</ds:Reference>
-<ds:Reference URI="#id-4">
-<ds:Transforms>
-<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
-<ec:InclusiveNamespaces PrefixList="edt idp msa soapenv"
-xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
-</ds:Transform>
-</ds:Transforms>
-<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>$digestvalue3</ds:DigestValue>
-</ds:Reference>
-<ds:Reference URI="#id-5">
-<ds:Transforms>
-<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
-<ec:InclusiveNamespaces PrefixList="ebs edt idp msa soapenv"
-xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
-</ds:Transform>
-</ds:Transforms>
-<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>$digestvalue4</ds:DigestValue>
-</ds:Reference>
+  <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+    <ec:InclusiveNamespaces PrefixList="ebs edt idp msa soapenv wsu"
+    xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+  </ds:CanonicalizationMethod>
+  <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+  <ds:Reference URI="#TS-1">
+    <ds:Transforms>
+      <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+        <ec:InclusiveNamespaces PrefixList="ebs edt idp msa"
+        xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+      </ds:Transform>
+    </ds:Transforms>
+    <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+    <ds:DigestValue>$digestvalue1</ds:DigestValue>
+  </ds:Reference>
+  <ds:Reference URI="#UsernameToken-2">
+    <ds:Transforms>
+      <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+        <ec:InclusiveNamespaces PrefixList="wsse ebs edt idp msa soapenv"
+        xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+      </ds:Transform>
+    </ds:Transforms>
+    <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+    <ds:DigestValue>$digestvalue2</ds:DigestValue>
+  </ds:Reference>
+  <ds:Reference URI="#id-3">
+    <ds:Transforms>
+      <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+        <ec:InclusiveNamespaces PrefixList="ebs edt msa soapenv"
+        xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+      </ds:Transform>
+    </ds:Transforms>
+    <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+    <ds:DigestValue>$digestvalue3</ds:DigestValue>
+  </ds:Reference>
+  <ds:Reference URI="#id-4">
+    <ds:Transforms>
+      <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+        <ec:InclusiveNamespaces PrefixList="edt idp msa soapenv"
+        xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+      </ds:Transform>
+    </ds:Transforms>
+    <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+    <ds:DigestValue>$digestvalue4</ds:DigestValue>
+  </ds:Reference>
+  <ds:Reference URI="#id-5">
+    <ds:Transforms>
+      <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+        <ec:InclusiveNamespaces PrefixList="ebs edt idp msa soapenv"
+        xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+      </ds:Transform>
+    </ds:Transforms>
+    <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+    <ds:DigestValue>$digestvalue5</ds:DigestValue>
+  </ds:Reference>
 </ds:SignedInfo>
 EOT;
+
+// turns out after all that work for me to get the digest values right, or so I thought.
+// it doesn't matter at all. if changing the digestvalue above to a wrong value, server will still respond with correct response.
+// so server is only checking the format and structure of your request, but not the actual digest values. as long as you have the right tags and the right SOAP and WSS structure, this web service doesn't actually check content is tampered with.
+  
 //insert namespace from all parent nodes before canonicalization
 $modsignedInfo = substr_replace($signedInfo, $root_namespaces, strpos($signedInfo, '<ds:SignedInfo') + strlen('<ds:SignedInfo'), 0);
 
@@ -319,9 +331,9 @@ $signedInfo
 $signature
 </ds:SignatureValue>
 <ds:KeyInfo Id="KI-4A6564966742022D8B170319672914255">
-<wsse:SecurityTokenReference wsu:Id="STR-4A6564966742022D8B170319672914256">
-<wsse:Reference URI="#X509-4A6564966742022D8B170319672914254" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3"/>
-</wsse:SecurityTokenReference>
+  <wsse:SecurityTokenReference wsu:Id="STR-4A6564966742022D8B170319672914256">
+    <wsse:Reference URI="#X509-4A6564966742022D8B170319672914254" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3"/>
+  </wsse:SecurityTokenReference>
 </ds:KeyInfo>
 </ds:Signature>
 </wsse:Security>
@@ -333,12 +345,14 @@ $body
 EOT;
   return $rawxml;
 }
+
 $rawxml = loadxmltemplate();
 // echo $rawxml."\n\n"; //for debugging
-// $xml = simplexml_load_string($rawxml);
 
 function sendrequest($xmlPayload) {
   $url = 'https://ws.conf.ebs.health.gov.on.ca:1443/EDTService/EDTService';
+  // this is the same as https://204.41.14.200:1443/EDTService/EDTService in WSDL
+  // better to use the domain name instead of IP, matches with the SSL certificate.
 
   global $method, $claimfile;
   switch ($method) {
@@ -386,7 +400,8 @@ function sendrequest($xmlPayload) {
     // case 'value3':
     //   // Code to execute if $method equals 'value3'
     //   break;
-    
+
+    // default works for info, getTypeInfo, delete
     default:
       $headers = [
           'Content-Type: text/xml;charset=UTF-8',
@@ -456,12 +471,13 @@ $response = sendrequest($rawxml);
 
 
 $decryptedResult = decryptResponse($response[1]);
-echo $decryptedResult; //for debugging
+echo $decryptedResult; // output plain text response to console
+// you will need to build your own code to handle errors e.g. $response[0] > 300
+// you will need to also parse $decryptedResult to extract the relevant data
 
 function decryptResponse($responseXML) {
   // input encrypted response XML, output decrypted result XML
   // Create SimpleXML object
-
   $xml = simplexml_load_string($responseXML);
 
   // Register the 'xenc' namespace
