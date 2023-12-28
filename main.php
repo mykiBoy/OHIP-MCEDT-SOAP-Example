@@ -39,6 +39,12 @@ openssl_pkcs12_read($pkcs12, $pkcs12Info, 'changeit');
 // load the private key
 $privatekey = $pkcs12Info['pkey'];
 
+// create responseObj to as the output of this API
+$responseObj = new stdClass();
+global $responseObj;
+
+// ============ initialization complete ================
+
 // in replit functions can be collapsed. collapsing all functions will help you get a sense of the structure.
 // first a number of functions defined to build different parts of the xml request. then all the parts are put together in loadxmltemplate()
 function loadbody() {
@@ -163,6 +169,8 @@ function loadEBS() {
 // generate uuid without external library because my server doesn't have composer
 $uuid = vsprintf( '%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex(random_bytes(16)), 4) );
 
+global $responseObj;
+$responseObj->uuid = $uuid;
 // hardcode conformance key here, as it will be permanent
 // auditId is an arbitrary random unique ID sent with each request to identify each request. To pass ministry of health's conformance testing you must prove you can receive correct responses from the web service and the government team can verify against server log that you indeed sent the correct request identified by the AuditId.
 $EBS = <<<EOT
@@ -448,9 +456,7 @@ function sendrequest($xmlPayload) {
   // request headers
 
   // Create and open a file for writing verbose output
-  $httpLogFile = fopen('httplog.txt', 'a');
-  // Delete all contents of the log file
-  file_put_contents('httplog.txt', '');
+  $httpLogFile = fopen('httplog.txt', 'w');
   // Write request headers to the log file
   fwrite($httpLogFile, curl_getinfo($ch, CURLINFO_HEADER_OUT));
   fwrite($httpLogFile, $xmlPayload."\n\n\n");
@@ -475,9 +481,9 @@ $response = sendrequest($rawxml);
 // echo "\nServerStatus= ".$response[0]."\n\n\n"; //for debugging
 // echo $response[1]."\n\n\n"; // for debugging
 
-
 $decryptedResult = decryptResponse($response[1]);
 echo $decryptedResult; // output plain text response to console
+// echo "\n\n" . json_encode($responseObj);
 // you will need to build your own code to handle errors e.g. $response[0] > 300
 // you will need to also parse $decryptedResult to extract the relevant data
 
@@ -502,7 +508,8 @@ function decryptResponse($responseXML) {
     $iv = substr(base64_decode($cipherValues[1]), 0, 16);
     // Decrypt using AES with CBC mode, PKCS5 padding, and the extracted IV
     $decryptedData = openssl_decrypt($cipherValues[1], 'aes-128-cbc', $decryptedAesKey, 0, $iv);
-      $responseXML = substr($decryptedData, 16);
+    $responseXML = substr($decryptedData, 16);
+    buildResponseObj($responseXML);
       return $responseXML;
   } else {
       //error handling
@@ -511,5 +518,39 @@ function decryptResponse($responseXML) {
       global $response;
       return $response[1];
   }
+}
+
+function buildResponseObj($decryptedResult) {
+  // Parse the XML
+  $xml = simplexml_load_string($decryptedResult);
+
+  global $responseObj;
+  // Store properties in $responseObj
+  $responseObj->auditID = (string)$xml->auditID;
+  $responseObj->status = (string)$xml->data->status;
+  $responseObj->description = (string)$xml->data->description;
+  $responseObj->resourceID = (string)$xml->data->resourceID;
+  $responseObj->msg = (string)$xml->data->result->msg;
+  $responseObj->code = (string)$xml->data->result->code;
+  $responseObj->resultSize = (int)$xml->resultSize;
+  // $responseObj->error = false;
+  
+  // Create and open a file for writing verbose output
+  $auditLogFile = fopen('auditlog.txt', 'a');
+
+  $auditContent = "Request AuditID: " . $responseObj->uuid."\n";
+  $auditContent .= "Response AuditID: ".$responseObj->auditID."\n";
+  $auditContent .= "Status: " . $responseObj->status . "\n";
+  $auditContent .= "Description: ".$responseObj->description."\n";
+  $auditContent .= "ResourceID: " . $responseObj->resourceID ."\n";
+  $auditContent .= "Message: " . $responseObj->msg . "\n";
+  $auditContent .= "Code: " . $responseObj->code . "\n";
+  $auditContent .= "Result Size: ".$responseObj->resultSize."\n";
+  $auditContent .= "===========================\n\n";
+  // Write request headers to the log file
+  fwrite($auditLogFile, $auditContent);
+
+  // Close the file handle for http log
+  fclose($auditLogFile);
 }
 
