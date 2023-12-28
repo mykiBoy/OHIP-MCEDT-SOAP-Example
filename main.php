@@ -3,9 +3,11 @@
 
 global $method, $claimfile, $resourceID;
 // $method = "getTypeList";
-global $resourceType, $resourceStatus, $resourcePage; // for list
 $method = "list";
+global $resourceType, $resourceStatus, $resourcePage; // for list
 $resourceType = 'CL'; // OPTIONAL can leave empty
+// CL, BE, ER, ES, RA, RS, PSP, GCM
+// ref getTypeList method's server response
 $resourceStatus = 'SUBMITTED'; 
 // UPLOADED, SUBMITTED, WIP, DOWNLOADABLE, APPROVED, DENIED
 // ref pg25 moh-ohip-techspec-mcedt-ebs-v4-5-en-2023-10-18.pdf
