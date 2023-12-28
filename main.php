@@ -3,11 +3,19 @@
 
 global $method, $claimfile, $resourceID;
 // $method = "getTypeList";
-// $method = "list";
-$method = "info";
+global $resourceType, $resourceStatus, $resourcePage; // for list
+$method = "list";
+$resourceType = 'CL'; // OPTIONAL can leave empty
+$resourceStatus = 'SUBMITTED'; 
+// UPLOADED, SUBMITTED, WIP, DOWNLOADABLE, APPROVED, DENIED
+// ref pg25 moh-ohip-techspec-mcedt-ebs-v4-5-en-2023-10-18.pdf
+$resourcePage = 1; // OPTIONAL can leave empty
+// $method = "info";
 // $method = 'upload';
 // $method = "delete";
 // $method = "update";
+// $method = "submit";
+// $method = 'download';
 $claimfile = 'Claim_File.txt';
 $resourceID = "83351";
 
@@ -43,29 +51,20 @@ function loadbody() {
       EOT;
         break;
     case 'list':
+      global $resourceType, $resourceStatus, $resourcePage;
       $rawbody = <<<EOT
          <soapenv:Body wsu:Id="id-5">
             <edt:list>
                <!--Optional:-->
-               <resourceType>CL</resourceType>
+               <resourceType>$resourceType</resourceType>
                <!--Optional:-->
-               <status>UPLOADED</status>
+               <status>$resourceStatus</status>
                <!--Optional:-->
-               <pageNo>1</pageNo>
+               <pageNo>$resourcePage</pageNo>
             </edt:list>
          </soapenv:Body>
       EOT;
         break;
-  case 'info':
-    $rawbody = <<<EOT
-     <soapenv:Body wsu:Id="id-5">
-        <edt:info>
-           <!--1 to 100 repetitions:-->
-           <resourceIDs>$resourceID</resourceIDs>
-        </edt:info>
-     </soapenv:Body>
-    EOT;
-      break;
   case 'upload':
     $rawbody = <<<EOT
     <soapenv:Body wsu:Id="id-5">
@@ -83,16 +82,6 @@ function loadbody() {
     </soapenv:Body>
     EOT;
       break;
-  case 'delete':
-    $rawbody = <<<EOT
-       <soapenv:Body wsu:Id="id-5">
-          <edt:delete>
-             <!--1 to 100 repetitions:-->
-             <resourceIDs>$resourceID</resourceIDs>
-          </edt:delete>
-       </soapenv:Body>
-    EOT;
-      break;
     case 'update':
       $rawbody = <<<EOT
          <soapenv:Body wsu:Id="id-5">
@@ -105,6 +94,20 @@ function loadbody() {
                 <resourceID>$resourceID</resourceID>
              </updates>
           </edt:update>
+         </soapenv:Body>
+      EOT;
+        break;
+    
+    case 'info':
+    case 'delete':
+    case 'submit':
+    case 'download':
+      $rawbody = <<<EOT
+         <soapenv:Body wsu:Id="id-5">
+            <edt:$method>
+               <!--1 to 100 repetitions:-->
+               <resourceIDs>$resourceID</resourceIDs>
+            </edt:$method>
          </soapenv:Body>
       EOT;
         break;
@@ -356,6 +359,7 @@ function sendrequest($xmlPayload) {
 
   global $method, $claimfile;
   switch ($method) {
+    // upload and update use the same MIME message structure
     case 'upload':
     case 'update':
       $fileContent = file_get_contents($claimfile);
@@ -401,7 +405,7 @@ function sendrequest($xmlPayload) {
     //   // Code to execute if $method equals 'value3'
     //   break;
 
-    // default works for info, getTypeInfo, delete
+    // default works for info, getTypeInfo, delete, submit, download
     default:
       $headers = [
           'Content-Type: text/xml;charset=UTF-8',
@@ -462,7 +466,7 @@ function sendrequest($xmlPayload) {
   return [$serverStatus,$body];
 }
 
-
+global $response;
 $response = sendrequest($rawxml);
 
 // echo out the response to console
@@ -499,10 +503,11 @@ function decryptResponse($responseXML) {
       $responseXML = substr($decryptedData, 16);
       return $responseXML;
   } else {
-      global $responseObj;
-      //set error flag to true
-      $responseObj->error = true;
-      $responseObj->errorMsg = "Ciphervalue not found";
+      //error handling
+      echo "Ciphervalue not found. Nothing to decrypt here. Unexpected server response.\n";
+      echo "Raw response received from server:\n\n";
+      global $response;
+      return $response[1];
   }
 }
 
