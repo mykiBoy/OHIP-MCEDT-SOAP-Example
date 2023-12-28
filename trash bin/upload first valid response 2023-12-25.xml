@@ -1,0 +1,18 @@
+<return
+	xmlns=""
+	xmlns:ns2="http://edt.health.ontario.ca/"
+	xmlns:ns3="http://idp.ebs.health.ontario.ca/"
+	xmlns:ns4="http://ebs.health.ontario.ca/"
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+	<auditID>5fd4531b-9b5a-4e44-a130-394313d9cfee</auditID>
+	<response>
+		<description>HL801284.017</description>
+		<resourceID>83330</resourceID>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<status>UPLOADED</status>
+	</response>
+</return>

@@ -1,0 +1,387 @@
+<return
+	xmlns=""
+	xmlns:ns2="http://edt.health.ontario.ca/"
+	xmlns:ns3="http://idp.ebs.health.ontario.ca/"
+	xmlns:ns4="http://ebs.health.ontario.ca/"
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+	<auditID>fcfa8a5f-5d39-4c0a-9644-2d79dc116b52</auditID>
+	<data>
+		<access>DOWNLOAD</access>
+		<descriptionEn>OBEC Response</descriptionEn>
+		<descriptionFr>Réponse SVAL</descriptionFr>
+		<groupRequired>false</groupRequired>
+		<resourceType>OO</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+	<data>
+		<access>DOWNLOAD</access>
+		<descriptionEn>eSubmit Submission Confirmation</descriptionEn>
+		<descriptionFr>eSubmit Submission Confirmation</descriptionFr>
+		<groupRequired>false</groupRequired>
+		<resourceType>ESC</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+	<data>
+		<access>DOWNLOAD</access>
+		<descriptionEn>Compensation Increase Report</descriptionEn>
+		<descriptionFr>Compensation Increase Report   é                     é</descriptionFr>
+		<groupRequired>false</groupRequired>
+		<resourceType>CIR</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+	<data>
+		<access>DOWNLOAD</access>
+		<descriptionEn>Remittance Advice Extract</descriptionEn>
+		<descriptionFr>Extrait de conseil sur les versements</descriptionFr>
+		<groupRequired>true</groupRequired>
+		<resourceType>RS</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+	<data>
+		<access>DOWNLOAD</access>
+		<descriptionEn>Detailed Cat PDF</descriptionEn>
+		<descriptionFr>Detailed Cat PDF               é                     é</descriptionFr>
+		<groupRequired>false</groupRequired>
+		<resourceType>DCP</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+	<data>
+		<access>DOWNLOAD</access>
+		<descriptionEn>eSubmit Form Return</descriptionEn>
+		<descriptionFr>eSubmit Form Return</descriptionFr>
+		<groupRequired>false</groupRequired>
+		<resourceType>EFR</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+	<data>
+		<access>UPLOAD</access>
+		<descriptionEn>Claim File</descriptionEn>
+		<descriptionFr>Dossier des demandes de règlement</descriptionFr>
+		<groupRequired>false</groupRequired>
+		<resourceType>CL</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+	<data>
+		<access>DOWNLOAD</access>
+		<descriptionEn>Error Reports Extract</descriptionEn>
+		<descriptionFr>Extrait des relevés d'erreurs</descriptionFr>
+		<groupRequired>true</groupRequired>
+		<resourceType>ES</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+	<data>
+		<access>DOWNLOAD</access>
+		<descriptionEn>Target Population PDF</descriptionEn>
+		<descriptionFr>Target Population PDF          é                     é</descriptionFr>
+		<groupRequired>false</groupRequired>
+		<resourceType>TPP</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+	<data>
+		<access>DOWNLOAD</access>
+		<descriptionEn>Detailed Cat CSV</descriptionEn>
+		<descriptionFr>Detailed Cat CSV               é                     é</descriptionFr>
+		<groupRequired>false</groupRequired>
+		<resourceType>DCT</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+	<data>
+		<access>UPLOAD</access>
+		<descriptionEn>OBEC inbound file</descriptionEn>
+		<descriptionFr>Fichier SVAL interne</descriptionFr>
+		<groupRequired>false</groupRequired>
+		<resourceType>OB</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+	<data>
+		<access>DOWNLOAD</access>
+		<descriptionEn>Target Population TAB</descriptionEn>
+		<descriptionFr>Target Population TAB          é                     é</descriptionFr>
+		<groupRequired>false</groupRequired>
+		<resourceType>TPT</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+	<data>
+		<access>DOWNLOAD</access>
+		<descriptionEn>OBEC Mail File Reject Message (from inbound)</descriptionEn>
+		<descriptionFr>Fichier du Courriel Refusé de la SVAL (entrant)</descriptionFr>
+		<groupRequired>false</groupRequired>
+		<resourceType>OR</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+	<data>
+		<access>DOWNLOAD</access>
+		<descriptionEn>Remittance Advice</descriptionEn>
+		<descriptionFr>Conseil sur les versements</descriptionFr>
+		<groupRequired>false</groupRequired>
+		<resourceType>RA</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+	<data>
+		<access>DOWNLOAD</access>
+		<descriptionEn>Roster Capitation Report XML</descriptionEn>
+		<descriptionFr>Roster Capitation Report XML   é                     é</descriptionFr>
+		<groupRequired>false</groupRequired>
+		<resourceType>RCX</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+	<data>
+		<access>DOWNLOAD</access>
+		<descriptionEn>Payment Summary Report PDF</descriptionEn>
+		<descriptionFr>Payment Summary Report PDF     é                     é</descriptionFr>
+		<groupRequired>false</groupRequired>
+		<resourceType>PSP</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+	<data>
+		<access>DOWNLOAD</access>
+		<descriptionEn>Claims Mail File Reject Message (from inbound)</descriptionEn>
+		<descriptionFr>Fichier du Courriel Refusé des Réclamations (entrant)</descriptionFr>
+		<groupRequired>false</groupRequired>
+		<resourceType>MR</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+	<data>
+		<access>DOWNLOAD</access>
+		<descriptionEn>General Communications</descriptionEn>
+		<descriptionFr>Communications générales</descriptionFr>
+		<groupRequired>false</groupRequired>
+		<resourceType>GCM</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+	<data>
+		<access>DOWNLOAD</access>
+		<descriptionEn>Stale Dated Claim file</descriptionEn>
+		<descriptionFr>Dossier de demande de règlement périmée</descriptionFr>
+		<groupRequired>false</groupRequired>
+		<resourceType>SDC</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+	<data>
+		<access>DOWNLOAD</access>
+		<descriptionEn>Payment Summary Report XML</descriptionEn>
+		<descriptionFr>Payment Summary Report XML     é                     é</descriptionFr>
+		<groupRequired>false</groupRequired>
+		<resourceType>PSX</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+	<data>
+		<access>DOWNLOAD</access>
+		<descriptionEn>Batch Edit</descriptionEn>
+		<descriptionFr>Modification par lot</descriptionFr>
+		<groupRequired>false</groupRequired>
+		<resourceType>BE</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+	<data>
+		<access>DOWNLOAD</access>
+		<descriptionEn>EC Outside Use report</descriptionEn>
+		<descriptionFr>Rapport d'utilisation Externe de l'IC</descriptionFr>
+		<groupRequired>false</groupRequired>
+		<resourceType>CO</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+	<data>
+		<access>DOWNLOAD</access>
+		<descriptionEn>Error Reports</descriptionEn>
+		<descriptionFr>Relevés d'erreur</descriptionFr>
+		<groupRequired>false</groupRequired>
+		<resourceType>ER</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+	<data>
+		<access>DOWNLOAD</access>
+		<descriptionEn>EC Summary report</descriptionEn>
+		<descriptionFr>Rapport sommaire sur les inscriptions et les consentements</descriptionFr>
+		<groupRequired>false</groupRequired>
+		<resourceType>CS</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+	<data>
+		<access>UPLOAD</access>
+		<descriptionEn>eSubmit Submission Upload</descriptionEn>
+		<descriptionFr>eSubmit Submission Upload</descriptionFr>
+		<groupRequired>false</groupRequired>
+		<resourceType>ESU</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+	<data>
+		<access>DOWNLOAD</access>
+		<descriptionEn>Roster Capitation Report PDF</descriptionEn>
+		<descriptionFr>Roster Capitation Report PDF   é                     é</descriptionFr>
+		<groupRequired>false</groupRequired>
+		<resourceType>RCP</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+	<data>
+		<access>UPLOAD</access>
+		<descriptionEn>Stale Dated Claim file</descriptionEn>
+		<descriptionFr>Dossier de demande de règlement périmée</descriptionFr>
+		<groupRequired>false</groupRequired>
+		<resourceType>SDC</resourceType>
+		<result>
+			<code>IEDTS0001</code>
+			<msg>Success</msg>
+		</result>
+		<csns>
+			<soloCsn>621300</soloCsn>
+		</csns>
+	</data>
+</return>
