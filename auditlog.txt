@@ -1,0 +1,105 @@
+Request AuditID: 380abd8b-6d90-8460-866d-72dd6c8223c8
+Response AuditID: 6d912236-0316-4068-99ec-73c67480f288
+Status: 
+Description: 
+ResourceID: 
+Message: 
+Code: 
+Result Size: 0
+===========================
+
+Request AuditID: 083791d1-27f6-80c0-185f-61830683009c
+Response AuditID: 185390b4-d86c-4c1a-a547-86e66613f0e3
+Status: 
+Description: 
+ResourceID: 
+Message: 
+Code: 
+Result Size: 0
+===========================
+
+Request AuditID: 893bc263-0e72-a93a-388e-d4f32a57d18a
+Response AuditID: 4e89be10-f3e9-4f50-b416-6ac463405acb
+Status: 
+Description: 
+ResourceID: 
+Message: 
+Code: 
+Result Size: 0
+===========================
+
+Request AuditID: db4fa97d-ab1f-694f-ef3a-3aadc5cc0358
+Response AuditID: 5b2bfe42-77f5-4db6-af4e-9a4c4210bd6c
+Status: SUBMITTED
+Description: HL801284.017
+ResourceID: 83351
+Message: Success
+Code: IEDTS0001
+Result Size: 1
+===========================
+
+Request AuditID: f72d74f5-e6a3-5766-bcb6-473188eb06ea
+Response AuditID: 966e9e96-9421-4fdd-9fbe-dbd565fdeaac
+Status: SUBMITTED
+Description: HL801284.017
+ResourceID: 83351
+Message: Success
+Code: IEDTS0001
+Result Size: 1
+===========================
+
+Request AuditID: 9771f86d-5709-726f-e5a1-db72838e214a
+Response AuditID: d6750dda-a3d2-495c-ae3f-6498df991354
+Status: UPLOADED
+Description: MOH_LARGE_CLAIMS.TXT
+ResourceID: 83361
+Message: Success
+Code: IEDTS0001
+Result Size: 1
+===========================
+
+Request AuditID: 5dbe9a1b-0807-14fa-c325-d40406baa1ce
+Response AuditID: 46b354b0-cc0f-425c-b6f1-83778c88bec8
+Status: UPLOADED
+Description: MOH_LARGE_CLAIMS.TXT
+ResourceID: 83361
+Message: Success
+Code: IEDTS0001
+Result Size: 1
+===========================
+Request AuditID: 94a39917-5a48-8bd7-d7c5-513b80d14eda
+Response AuditID: 9582d4f0-216c-4faf-8db6-f5b1554aaac0
+Status: UPLOADED
+Description: Claim_File.txt
+ResourceID: 83362
+Message: Success
+Code: IEDTS0001
+Result Size: 0
+===========================
+Request AuditID: c06f51e0-6e96-c86a-73e4-b17c6a06fe71
+Response AuditID: 15c00783-84d6-49af-9f9c-7a87400fabaf
+Status: UPLOADED
+Description: Claim_File.txt
+ResourceID: 83362
+Message: Success
+Code: IEDTS0001
+Result Size: 1
+===========================
+Request AuditID: 2a77dfef-4091-947d-a970-e55de7c7260d
+Response AuditID: 89de30ec-1ff7-4bd3-88a6-c30108a1363e
+Status: UPLOADED
+Description: HA801284.019
+ResourceID: 83381
+Message: Success
+Code: IEDTS0001
+Result Size: 0
+===========================
+Request AuditID: c43c9fef-7335-7ed7-75ac-4a789fed1229
+Response AuditID: 6f3c5dda-8765-44b3-8ec5-a38602bbe4ee
+Status: UPLOADED
+Description: HA801284.019
+ResourceID: 83382
+Message: Success
+Code: IEDTS0001
+Result Size: 0
+===========================

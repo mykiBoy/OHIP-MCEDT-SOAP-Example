@@ -1,24 +1,23 @@
 <?php
+ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
+// this API takes POST input with a specified method and output server response as decrypted XML
 // initialize with input parameters to this API
 
 global $method, $claimfile, $resourceID;
-// $method = "getTypeList";
-$method = "list";
-global $resourceType, $resourceStatus, $resourcePage; // for list
-$resourceType = 'CL'; // OPTIONAL can leave empty
+$method = 'upload'; //$_POST['method']
+//getTypeList,list,info,upload,delete,update,submit,download
+$claimfile = 'trash bin/HA801284.019'; 
+//can contain forward slash for claimfile foldername
+
+// vars needed for list method
+global $resourceType, $resourceStatus, $resourcePage;
+$resourceType = 'BE'; // OPTIONAL can leave empty
 // CL, BE, ER, ES, RA, RS, PSP, GCM
 // ref getTypeList method's server response
-$resourceStatus = 'SUBMITTED'; 
+$resourceStatus = 'DOWNLOADABLE'; 
 // UPLOADED, SUBMITTED, WIP, DOWNLOADABLE, APPROVED, DENIED
 // ref pg25 moh-ohip-techspec-mcedt-ebs-v4-5-en-2023-10-18.pdf
-$resourcePage = 1; // OPTIONAL can leave empty
-// $method = "info";
-// $method = 'upload';
-// $method = "delete";
-// $method = "update";
-// $method = "submit";
-// $method = 'download';
-$claimfile = 'Claim_File.txt';
+$resourcePage = 1;
 $resourceID = "83351";
 
 // replace with your own conformance testing credentials
@@ -32,14 +31,12 @@ $password = 'Password2!';
 global $privatekey;
 // Load the PKCS#12 file
 $pkcs12 = file_get_contents('teststore.p12');
-
 // Parse the PKCS#12 file to extract private key and certificate
 openssl_pkcs12_read($pkcs12, $pkcs12Info, 'changeit');
-
 // load the private key
 $privatekey = $pkcs12Info['pkey'];
 
-// create responseObj to as the output of this API
+// create responseObj for auditlog tracking
 $responseObj = new stdClass();
 global $responseObj;
 
@@ -74,16 +71,19 @@ function loadbody() {
       EOT;
         break;
   case 'upload':
+    $claimfilename = basename($claimfile); // just filename
+    // hardcode cid or contentID, assuming just one attachment
+    // cid need not be the filename, although it could.
     $rawbody = <<<EOT
     <soapenv:Body wsu:Id="id-5">
       <edt:upload>
          <!--1 to 5 repetitions:-->
          <upload>
             <content>
-              <inc:Include href="cid:$claimfile" xmlns:inc="http://www.w3.org/2004/08/xop/include" />
+              <inc:Include href="cid:mykiboy" xmlns:inc="http://www.w3.org/2004/08/xop/include" />
             </content>
             <!--Optional:-->
-            <description>$claimfile</description>
+            <description>$claimfilename</description>
             <resourceType>CL</resourceType>
          </upload>
       </edt:upload>
@@ -97,7 +97,7 @@ function loadbody() {
              <!--1 to 5 repetitions:-->
              <updates>
                 <content>
-        <inc:Include href="cid:$claimfile" xmlns:inc="http://www.w3.org/2004/08/xop/include" />
+        <inc:Include href="cid:mykiboy" xmlns:inc="http://www.w3.org/2004/08/xop/include" />
                 </content>
                 <resourceID>$resourceID</resourceID>
              </updates>
@@ -392,7 +392,7 @@ function sendrequest($xmlPayload) {
       $mimeMessage .= "Content-Type: text/plain; charset=us-ascii\r\n";
       $mimeMessage .= "Content-Transfer-Encoding: 7bit\r\n";
       // contentId is just the file name e.g. HL8012345.001
-      $mimeMessage .= "Content-ID: <$claimfile>\r\n";
+      $mimeMessage .= "Content-ID: <mykiboy>\r\n";
       $mimeMessage .= "Content-Disposition: attachment;   name=\"$claimfile\"\r\n\r\n";
       $mimeMessage .= "$fileContent\r\n";
       $mimeMessage .= "--$boundary--";
@@ -513,8 +513,8 @@ function decryptResponse($responseXML) {
       return $responseXML;
   } else {
       //error handling
-      echo "Ciphervalue not found. Nothing to decrypt here. Unexpected server response.\n";
-      echo "Raw response received from server:\n\n";
+      // echo "Ciphervalue not found. Nothing to decrypt here.\n";
+      // echo "Raw response received from server:\n\n";
       global $response;
       return $response[1];
   }
@@ -523,15 +523,15 @@ function decryptResponse($responseXML) {
 function buildResponseObj($decryptedResult) {
   // Parse the XML
   $xml = simplexml_load_string($decryptedResult);
-
+  
   global $responseObj;
   // Store properties in $responseObj
   $responseObj->auditID = (string)$xml->auditID;
-  $responseObj->status = (string)$xml->data->status;
-  $responseObj->description = (string)$xml->data->description;
-  $responseObj->resourceID = (string)$xml->data->resourceID;
-  $responseObj->msg = (string)$xml->data->result->msg;
-  $responseObj->code = (string)$xml->data->result->code;
+  $responseObj->status = (string)$xml->xpath('//status')[0];
+  $responseObj->description = (string)$xml->xpath('//description')[0];
+  $responseObj->resourceID = (string)$xml->xpath('//resourceID')[0];
+  $responseObj->msg = (string)$xml->xpath('//msg')[0];
+  $responseObj->code = (string)$xml->xpath('//code')[0];
   $responseObj->resultSize = (int)$xml->resultSize;
   // $responseObj->error = false;
   
@@ -546,7 +546,7 @@ function buildResponseObj($decryptedResult) {
   $auditContent .= "Message: " . $responseObj->msg . "\n";
   $auditContent .= "Code: " . $responseObj->code . "\n";
   $auditContent .= "Result Size: ".$responseObj->resultSize."\n";
-  $auditContent .= "===========================\n\n";
+  $auditContent .= "===========================\n";
   // Write request headers to the log file
   fwrite($auditLogFile, $auditContent);
 
