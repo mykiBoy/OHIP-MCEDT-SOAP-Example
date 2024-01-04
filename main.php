@@ -6,7 +6,7 @@ ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_report
 global $method, $claimfile, $resourceID;
 $method = 'upload'; //$_POST['method']
 //getTypeList,list,info,upload,delete,update,submit,download
-$claimfile = 'trash bin/HA801284.019'; 
+$claimfile = 'trash bin/Claim_File.txt'; 
 //can contain forward slash for claimfile foldername
 
 // vars needed for list method
