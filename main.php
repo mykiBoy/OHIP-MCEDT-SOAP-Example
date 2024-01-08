@@ -527,9 +527,11 @@ function buildResponseObj($decryptedResult) {
   global $responseObj;
   // Store properties in $responseObj
   $responseObj->auditID = (string)$xml->auditID;
-  $responseObj->status = (string)$xml->xpath('//status')[0];
-  $responseObj->description = (string)$xml->xpath('//description')[0];
-  $responseObj->resourceID = (string)$xml->xpath('//resourceID')[0];
+  if ($xml->xpath('//code')[0] == "IEDTS0001") {
+    $responseObj->status = (string)$xml->xpath('//status')[0];
+    $responseObj->description = (string)$xml->xpath('//description')[0];
+    $responseObj->resourceID = (string)$xml->xpath('//resourceID')[0];
+  }
   $responseObj->msg = (string)$xml->xpath('//msg')[0];
   $responseObj->code = (string)$xml->xpath('//code')[0];
   $responseObj->resultSize = (int)$xml->resultSize;
@@ -540,12 +542,15 @@ function buildResponseObj($decryptedResult) {
 
   $auditContent = "Request AuditID: " . $responseObj->uuid."\n";
   $auditContent .= "Response AuditID: ".$responseObj->auditID."\n";
-  $auditContent .= "Status: " . $responseObj->status . "\n";
-  $auditContent .= "Description: ".$responseObj->description."\n";
-  $auditContent .= "ResourceID: " . $responseObj->resourceID ."\n";
   $auditContent .= "Message: " . $responseObj->msg . "\n";
   $auditContent .= "Code: " . $responseObj->code . "\n";
-  $auditContent .= "Result Size: ".$responseObj->resultSize."\n";
+  if ($responseObj->code == "IEDTS0001") {
+    $auditContent .= "Status: " . $responseObj->status . "\n";
+    $auditContent .= "Description: ".$responseObj->description."\n";
+    $auditContent .= "ResourceID: " . $responseObj->resourceID ."\n";
+    // if $responseObj->status == downloadable? then below?
+    $auditContent .= "Result Size: ".$responseObj->resultSize."\n";
+  }
   $auditContent .= "===========================\n";
   // Write request headers to the log file
   fwrite($auditLogFile, $auditContent);
