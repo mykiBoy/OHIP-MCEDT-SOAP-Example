@@ -11,7 +11,7 @@ $claimfile = 'trash bin/Claim_File.txt';
 
 // vars needed for list method
 global $resourceType, $resourceStatus, $resourcePage;
-$resourceType = 'BE'; // OPTIONAL can leave empty
+$resourceType = 'RA'; // OPTIONAL can leave empty
 // CL, BE, ER, ES, RA, RS, PSP, GCM
 // ref getTypeList method's server response
 $resourceStatus = 'DOWNLOADABLE'; 
@@ -534,8 +534,9 @@ function buildResponseObj($decryptedResult) {
   }
   $responseObj->msg = (string)$xml->xpath('//msg')[0];
   $responseObj->code = (string)$xml->xpath('//code')[0];
-  $responseObj->resultSize = (int)$xml->resultSize;
-  // $responseObj->error = false;
+  if (isset($xml->resultSize)) {
+    $responseObj->resultSize = (int)$xml->resultSize;
+  }
   
   // Create and open a file for writing verbose output
   $auditLogFile = fopen('auditlog.txt', 'a');
@@ -548,8 +549,9 @@ function buildResponseObj($decryptedResult) {
     $auditContent .= "Status: " . $responseObj->status . "\n";
     $auditContent .= "Description: ".$responseObj->description."\n";
     $auditContent .= "ResourceID: " . $responseObj->resourceID ."\n";
-    // if $responseObj->status == downloadable? then below?
-    $auditContent .= "Result Size: ".$responseObj->resultSize."\n";
+    if (isset($responseObj->resultSize)) {
+      $auditContent .= "Result Size: ".$responseObj->resultSize."\n";
+    }
   }
   $auditContent .= "===========================\n";
   // Write request headers to the log file
