@@ -22,7 +22,7 @@ $resourceStatus = 'DOWNLOADABLE';
 // UPLOADED, SUBMITTED, WIP, DOWNLOADABLE, APPROVED, DENIED
 // ref pg25 moh-ohip-techspec-mcedt-ebs-v4-5-en-2023-10-18.pdf
 $resourcePage = 1;
-$resourceID = "83549";
+$resourceID = "83445";
 
 // replace with your own conformance testing credentials
 // scroll down to replace conformance testing key further down the code base
@@ -69,10 +69,11 @@ switch ($method) {
   case 'download':
     echo "Downloading file...\n";
     list($decryptedResult,$decrypted_attachment)=decryptResponse($response,$privatekey);
+
     break;
   default:
     echo "Uploading file...\n";
-    $decryptedResult = decryptResponse_1($response[1],$privatekey);
+    $decryptedResult = decryptResponse_1($response,$privatekey);
     // echo $decryptedResult;
     breaK;
 }

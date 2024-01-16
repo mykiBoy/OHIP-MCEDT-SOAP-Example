@@ -691,29 +691,36 @@ function buildResponseObj($decryptedResult) {
   // Close the file handle for http log
   fclose($auditLogFile);
 }
-function decryptResponse_1($responseXML,$privatekey){
-  // input encrypted response XML, output decrypted result XML
-  // Create SimpleXML object
+function decryptResponse_1($responseXML,$private_key){
+  // Extract AES key for SOAP body
+  preg_match('/<xenc:CipherValue>(.*?)<\/xenc:CipherValue>/', $responseXML, $matches);
+  $aesKey = base64_decode($matches[1]);
 
-  $xml = simplexml_load_string($responseXML);
+  // Load private key
+  $privateKey = openssl_pkey_get_private($private_key);
 
-  // Register the 'xenc' namespace
-  $xml->registerXPathNamespace('xenc', 'http://www.w3.org/2001/04/xmlenc#');
+  // Decrypt AES key for SOAP body
+  openssl_private_decrypt($aesKey, $decryptedAesKey, $privateKey);
 
-  // Use XPath to select the CipherValue
-  $cipherValues = $xml->xpath('//xenc:CipherValue');
-// var_dump($cipherValues);
-  // Check if CipherValues were found
-  if (!empty($cipherValues)) {
+  // Output decrypted AES key for SOAP body
+  echo "Decrypted AES key for SOAP body: " . base64_encode($decryptedAesKey) . "\n\n";
+
+  preg_match_all('/<xenc:CipherValue>(.*?)<\/xenc:CipherValue>/', $responseXML, $matches);
+  // var_dump($matches);
+  $ciphertext = $matches[1][1];
+  // var_dump($ciphertext);
+  if (!empty($ciphertext)) {
       // Decrypt using private key
       global $privatekey;
-      openssl_private_decrypt(base64_decode($cipherValues[0]), $decryptedAesKey, $privatekey, OPENSSL_PKCS1_PADDING);
-      // echo "AES key: ",base64_encode($decryptedAesKey),"\n\n";
-    // Extract the initialization vector required for AES decryption
-    $iv = substr(base64_decode($cipherValues[1]), 0, 16);
-    // Decrypt using AES with CBC mode, PKCS5 padding, and the extracted IV
-    $decryptedData = openssl_decrypt($cipherValues[1], 'aes-128-cbc', $decryptedAesKey, 0, $iv);
-      $responseXML = substr($decryptedData, 16);
+    // Initialize the AES cipher with the decrypted AES key and CBC mode
+    $iv = str_repeat("\0", 16); // Initialization vector (first 16 bytes)
+    $decryptedData = openssl_decrypt($ciphertext, 'aes-128-cbc', $decryptedAesKey, 0, $iv);
+
+    // Remove PKCS5 padding from the decrypted text
+    $responseXML = rtrim($decryptedData, "\0");
+
+      $responseXML = substr($responseXML , 16);
+    echo "Decrypted XML: " . $responseXML . "\n";
       return $responseXML;
   } else {
       global $responseObj;
@@ -786,9 +793,10 @@ function decrypt_body_content($decrypted_aes_key,$responseXML) {
   // Extract the ciphertext from the raw SOAP response
   // preg_match('/<xenc:CipherValue>(.*?)<\/xenc:CipherValue>/', $responseXML, $matches);
   preg_match_all('/<xenc:CipherValue>(.*?)<\/xenc:CipherValue>/', $responseXML, $matches);
+  var_dump($matches);
   $ciphertext = $matches[1][2];
-  echo "***body_content\n\n";
-  var_dump($ciphertext);
+  // echo "***body_content\n\n";
+  // var_dump($ciphertext);
 
   // Initialize the AES cipher with the decrypted AES key and CBC mode
   $iv = str_repeat("\0", 16); // Initialization vector (first 16 bytes)
@@ -830,110 +838,55 @@ function get_keys($private_key,$responseXML) {
   // Return the decrypted AES keys
   return [$decryptedAesKey, $decryptedAesKeyAttachment];
 }
-// tyy diffenent approaches to decrypt the response (attachment)
-function decryptAttachmentModeCBCNoDecode_2($attachmentAesKey, $rawResponse)
-{
-    $contentId = getCID($rawResponse);
-    echo $contentId . "\n";
-
-    // Create a pattern to match the content
-    $pattern = '/Content-ID: <' . preg_quote($contentId) . '>\r\n\r\n(.*?)\r\n--MIMEBoundary_/s';
-
-    // Search for the pattern in the raw response
-    preg_match($pattern, $rawResponse, $matches);
-    $attachmentByte = $matches[1];
-
-    echo $attachmentByte . "\n\naaaaaaaaaaa\n";
-
-  // // Convert binary string to byte string
-  // $byteString = implode(unpack("H*", $attachmentByte));
-  // echo $byteString . "\n";
-
-  // // Convert the hexadecimal representation to a byte string
-  // $byteString = hex2bin($byteString);
-  // // echo $byteString . "\n";
-
-  // // Now $byteString contains the binary data, you can use it as needed
-  // echo bin2hex($byteString);  // This will output the hexadecimal representation of the byte string
-
-    // Initialize the AES cipher with the decrypted_aes_key and CBC mode
-  // Extract only hexadecimal characters using a regular expression
-  preg_match_all('/[0-9a-fA-F]/', $contentId, $matches);
-  $hexString = implode('', $matches[0]);
-  // Check if the length is odd
-  if (strlen($hexString) % 2 != 0) {
-      // Pad the string with a leading zero
-      $hexString = '0' . $hexString;
-  }
-  // Now, $hexString has an even length
-  $binaryContentId = hex2bin($hexString);
-
-  // Use $binaryContentId in your openssl_decrypt function
-  // $cipher = openssl_decrypt($attachmentByte, 'AES-128-CBC', $attachmentAesKey, 0, $binaryContentId);
-    // $cipher = openssl_decrypt($attachmentByte, 'AES-128-CBC', $attachmentAesKey, 0, hex2bin($contentId));
-  // Assuming $binaryContentId is properly obtained
-  $iv = substr($binaryContentId, 0, 16); // Take the first 16 bytes as IV
-
-  // Use $iv in your openssl_decrypt function
-  $cipher = openssl_decrypt($attachmentByte, 'AES-128-CBC', $attachmentAesKey, 0, $iv);
-
-    echo $cipher . "\n";
-
-    // Remove PKCS5 padding from the decrypted text
-    $plaintext = rtrim($cipher, "\0");
-    // First 16 bytes removed as it is just initialization vector per MOH documentation
-    $plaintext = substr($plaintext, 16);
-
-    echo "\n===============\n", utf8_decode($plaintext);
-}
 
 function decryptAttachmentModeCBCNoDecode($attachmentAesKey, $rawResponse)
 {
-  var_dump($attachmentAesKey);
-  var_dump(base64_encode($attachmentAesKey));
+  // var_dump($attachmentAesKey);
+  // var_dump(base64_encode($attachmentAesKey));
   // var_dump($rawResponse);
     $contentId = getCID($rawResponse);
-    echo "\n".$contentId . "\n\n";
+    // echo "\n".$contentId . "\n\n";
     // Create a pattern to match the content
     $pattern = '/Content-ID: <' . preg_quote($contentId) . '>\r\n\r\n(.*?)\r\n--MIMEBoundary_/s';
 
     // Search for the pattern in the raw response
     preg_match($pattern, $rawResponse, $matches);
     $attachmentByte = $matches[1];
-var_dump($attachmentByte);
+// var_dump($attachmentByte);
    $a= base64_encode($attachmentByte);
-  var_dump($a);
-  $d=bin2hex($a);
-  var_dump($d);
-  echo "base64 encoded > bin2hex\n";
-  // $c=base64_decode($attachmentByte);
-  // var_dump($c);
-  // var_dump(bin2hex($c));
-  // echo "base64 decoded > bin2hex\n";
+  // var_dump($a);
+//   $d=bin2hex($a);
+//   var_dump($d);
+//   echo "base64 encoded > bin2hex\n";
+//   // $c=base64_decode($attachmentByte);
+//   // var_dump($c);
+//   // var_dump(bin2hex($c));
+//   // echo "base64 decoded > bin2hex\n";
 
   
-  $b=hex2bin($d);
-  var_dump($b);
-  // $byteString = pack("H*", $b);
-  // var_dump($byteString);
-  // $byteString = unpack("H*", $b);
-  // var_dump($byteString);
-echo "bin2hex pack> unpack\n";
+//   $b=hex2bin($d);
+//   var_dump($b);
+//   // $byteString = pack("H*", $b);
+//   // var_dump($byteString);
+//   // $byteString = unpack("H*", $b);
+//   // var_dump($byteString);
+// echo "bin2hex pack> unpack\n";
   // how to convert to hex string?
-    echo  "__aaaaaaaaaaa\n";
+    // echo  "__aaaaaaaaaaa\n";
   $iv = str_repeat("\0", 16); // Initialization vector (first 16 bytes)
     // Initialize the AES cipher with the decrypted_aes_key and CBC mode
     $cipher = openssl_decrypt($a, 'AES-128-CBC', $attachmentAesKey, 0, $iv);
 
-    echo $cipher . "\n";
-  var_dump($cipher);
+    // echo $cipher . "\n";
+  // var_dump($cipher);
 
     // Remove PKCS5 padding from the decrypted text
     $plaintext = rtrim($cipher, "\0");
     // First 16 bytes removed as it is just initialization vector per MOH documentation
     $plaintext = substr($plaintext, 16);
 
-    echo "\n===============\n", utf8_decode($plaintext);
+    // echo "\n===============\n", utf8_decode($plaintext);
+  file_put_contents('attachment.txt', utf8_decode($plaintext));
 }
 
 
