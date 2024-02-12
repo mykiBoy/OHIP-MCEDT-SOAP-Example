@@ -15,8 +15,8 @@ xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-s
       Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">Password2!</wsse:Password>
   </wsse:UsernameToken>
   <wsu:Timestamp wsu:Id="TS-1">
-    <wsu:Created>2024-01-16T21:54:20.056Z</wsu:Created>
-    <wsu:Expires>2024-01-16T22:04:20.056Z</wsu:Expires>
+    <wsu:Created>2024-02-12T17:57:44.073Z</wsu:Created>
+    <wsu:Expires>2024-02-12T18:07:44.073Z</wsu:Expires>
   </wsu:Timestamp>
 <ds:Signature Id="SIG-6" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
 <ds:SignedInfo>
@@ -33,7 +33,7 @@ xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-s
       </ds:Transform>
     </ds:Transforms>
     <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-    <ds:DigestValue>ZaLyk45dqR4GtxgeZgBA11FUQS1OGzC536c1EQPMnB8=</ds:DigestValue>
+    <ds:DigestValue>ppWYmJpplCt2IUDaI2Ehl30C+IsV2gHw88VX2ItRMC8=</ds:DigestValue>
   </ds:Reference>
   <ds:Reference URI="#UsernameToken-2">
     <ds:Transforms>
@@ -63,7 +63,7 @@ xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-s
       </ds:Transform>
     </ds:Transforms>
     <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-    <ds:DigestValue>g5fBSBTMhHSkT/PjcPghPbEgfLuRYOktJ1vjJwNRisM=</ds:DigestValue>
+    <ds:DigestValue>DB3w9fgchZA61aWzQmf6PrSb4JRMHqbk8tFVla0Eqmk=</ds:DigestValue>
   </ds:Reference>
   <ds:Reference URI="#id-5">
     <ds:Transforms>
@@ -73,11 +73,11 @@ xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-s
       </ds:Transform>
     </ds:Transforms>
     <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-    <ds:DigestValue>50wRDisMLUpbZ0V2cJSAigI0L6Es34UhJwR1PKTYFd8=</ds:DigestValue>
+    <ds:DigestValue>F/c8Ix77PD5icjZwp+ZvDohBOVLRjYfcEk18HqVZSU4=</ds:DigestValue>
   </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-DBtJiyawAOIHADGf1ZmkTS0BZIW98PpcFbZEbmrjQbaHnN+gy9BioNNjb/El/UqFn/bw/aRiLf/I2vKAVgjtIZufk0dS77TWlJy7kmZIfXPP9pbfuE6OZR0HbnEJhjkyDEfVcCKYjs4d+n12+TcK8ujzAFj2Hrq7QW+AfeYzTPE=
+etKV+XKCn55X6Hisd6WHDrNDgRpoLkRrQEgt4mZ4QDTOf+7zKoSd/lHMm047CjWkgB/Cl92PBmjj4YBPLtu1ya/ZFl5bK0JTLvZApAePUSeE6+Uvze+Qr47m00zTqLFF/E8xQ7gKa8RPhBpIomCBjwpfpnFueSpllnySM2c15oM=
 </ds:SignatureValue>
 <ds:KeyInfo Id="KI-4A6564966742022D8B170319672914255">
   <wsse:SecurityTokenReference wsu:Id="STR-4A6564966742022D8B170319672914256">
@@ -91,10 +91,13 @@ DBtJiyawAOIHADGf1ZmkTS0BZIW98PpcFbZEbmrjQbaHnN+gy9BioNNjb/El/UqFn/bw/aRiLf/I2vKA
   </idp:IDP>
   <ebs:EBS wsu:Id="id-4">
       <SoftwareConformanceKey>da3c7d46-42b9-4cd5-8485-8580e3a39593</SoftwareConformanceKey>
-      <AuditId>7f1c66cd-d9a1-cfdf-0e7b-52f49e6f4fb6</AuditId>
+      <AuditId>7fc58b54-aae2-7997-e0eb-7dea069b9b2b</AuditId>
   </ebs:EBS>
 </soapenv:Header>
    <soapenv:Body wsu:Id="id-5">
-      <edt:getTypeList/>
+      <edt:download>
+         <!--1 to 100 repetitions:-->
+         <resourceIDs>83445</resourceIDs>
+      </edt:download>
    </soapenv:Body>
 </soapenv:Envelope>

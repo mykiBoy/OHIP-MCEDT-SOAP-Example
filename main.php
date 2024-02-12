@@ -1,5 +1,6 @@
 <?php
 include_once 'request_functions.php';
+include_once 'response_to_file.php';
 
 ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
 // this API takes POST input with a specified method and output server response as decrypted XML
@@ -7,23 +8,22 @@ ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_report
 // Define API commands and their corresponding functions
 
 global $method, $claimfile, $resourceID;
-$method = command_menu();
-// $method = 'download'; //$_POST['method']
+// $method = command_menu();
+$method = 'download'; //$_POST['method']
 //getTypeList,list,info,upload,delete,update,submit,download
 $claimfile = 'trash bin/Claim_File.txt'; 
 //can contain forward slash for claimfile foldername
 
 // vars needed for list method
 global $resourceType, $resourceStatus, $resourcePage;
-$resourceType = 'BE'; // OPTIONAL can leave empty
-// CL, BE, ER, ES, RA, RS, PSP, GCM
 // ref getTypeList method's server response
 $resourceStatus = 'DOWNLOADABLE'; 
 // UPLOADED, SUBMITTED, WIP, DOWNLOADABLE, APPROVED, DENIED
 // ref pg25 moh-ohip-techspec-mcedt-ebs-v4-5-en-2023-10-18.pdf
 $resourcePage = 1;
 $resourceID = "83445";
-
+$resourceType = 'RA'; // OPTIONAL can leave empty
+// CL, BE, ER, ES, RA, RS, PSP, GCM
 // replace with your own conformance testing credentials
 // scroll down to replace conformance testing key further down the code base
 global $MOH_ID, $username, $password;
@@ -52,7 +52,7 @@ global $response;
 // list($serverStatus,$body)=sendrequest($rawxml);
 // echo $serverStatus."\n\n";
 // echo 'Body\n'.$body."\n\n"; //for debugging
-$response = sendrequest($rawxml);
+list($serverStatus,$response) = sendrequest($rawxml);
 file_put_contents('soap_response.pickle', serialize($response));
 // Save the SOAP response to a file
 file_put_contents('soap_response.xml', $response);
@@ -65,19 +65,25 @@ file_put_contents('soap_response.xml', $response);
 // echo "\n\n" . json_encode($responseObj);
 // you will need to build your own code to handle errors e.g. $response[0] > 300
 // you will need to also parse $decryptedResult to extract the relevant data
-switch ($method) {
-  case 'download':
-    echo "Downloading file...\n";
-    list($decryptedResult,$decrypted_attachment)=decryptResponse($response,$privatekey);
-
-    break;
-  default:
-    echo "Uploading file...\n";
-    $decryptedResult = decryptResponse_1($response,$privatekey);
-    // echo $decryptedResult;
-    breaK;
+// echo "Response Status: ".$serverStatus."\n\n";
+if ($serverStatus == 200){
+  switch ($method) {
+    case 'download':  list($decryptedResult,$decrypted_attachment)=decryptResponse($response,$privatekey);
+    echo $decryptedResult;
+    // echo "\nDecrypted Attachment:\n$decrypted_attachment\n";
+    $xml = simplexml_load_string($decryptedResult);
+    // get_content_from_xml_1($xml);
+    $file_name=get_content_from_xml($xml,'description');
+    file_put_contents("MCEDT/".$file_name, $decrypted_attachment);
+      break;
+    default:
+      $decryptedResult = decryptResponse_1($response,$privatekey);
+    echo $decryptedResult;
+    $xml = simplexml_load_string($decryptedResult);
+    // get_content_from_xml_1($xml);
+      break;
+  }
 }
-
 
 
 

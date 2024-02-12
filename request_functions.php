@@ -435,9 +435,35 @@ function sendrequest($xmlPayload) {
   $response = curl_exec($ch);
 // var_dump($response);
 
-  // Output the response
-  return $response;
-}
+    if (curl_errno($ch)) {
+        echo 'Curl error: ' . curl_error($ch);
+    }
+
+    $info_array = curl_getinfo($ch);
+    // print_r($info_array); //for debug
+    // echo $info_array['http_code']."\n\n"; //== $serverStatus
+    // echo $info_array['request_header'];
+    $serverStatus = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    // request headers
+
+    // Create and open a file for writing verbose output
+    $httpLogFile = fopen('httplog.txt', 'w');
+    // Write request headers to the log file
+    fwrite($httpLogFile, curl_getinfo($ch, CURLINFO_HEADER_OUT));
+    fwrite($httpLogFile, $xmlPayload."\n\n\n");
+
+    // Extract body from the response
+    $body = substr($response, curl_getinfo($ch, CURLINFO_HEADER_SIZE));
+    fwrite($httpLogFile, $response);
+    // Close the file handle for http log
+    fclose($httpLogFile);
+
+    // Close cURL session
+    curl_close($ch);
+
+    // Output the response
+    return [$serverStatus,$response];
+  }
 function sendrequest_1($xmlPayload) {
   $url = 'https://ws.conf.ebs.health.gov.on.ca:1443/EDTService/EDTService';
   // this is the same as https://204.41.14.200:1443/EDTService/EDTService in WSDL
@@ -692,6 +718,7 @@ function buildResponseObj($decryptedResult) {
   fclose($auditLogFile);
 }
 function decryptResponse_1($responseXML,$private_key){
+  // decrypt server response for all methods except download
   // Extract AES key for SOAP body
   preg_match('/<xenc:CipherValue>(.*?)<\/xenc:CipherValue>/', $responseXML, $matches);
   $aesKey = base64_decode($matches[1]);
@@ -702,8 +729,8 @@ function decryptResponse_1($responseXML,$private_key){
   // Decrypt AES key for SOAP body
   openssl_private_decrypt($aesKey, $decryptedAesKey, $privateKey);
 
-  // Output decrypted AES key for SOAP body
-  echo "Decrypted AES key for SOAP body: " . base64_encode($decryptedAesKey) . "\n\n";
+  // Output decrypted AES key for SOAP body for debug
+  // echo "Decrypted AES key for SOAP body: " .     base64_encode($decryptedAesKey) . "\n\n";
 
   preg_match_all('/<xenc:CipherValue>(.*?)<\/xenc:CipherValue>/', $responseXML, $matches);
   // var_dump($matches);
@@ -720,7 +747,7 @@ function decryptResponse_1($responseXML,$private_key){
     $responseXML = rtrim($decryptedData, "\0");
 
       $responseXML = substr($responseXML , 16);
-    echo "Decrypted XML: " . $responseXML . "\n";
+    // echo "Decrypted XML: " . $responseXML . "\n";
       return $responseXML;
   } else {
       global $responseObj;
@@ -730,6 +757,7 @@ function decryptResponse_1($responseXML,$private_key){
   }
 }
 function decryptResponse($responseXML,$privatekey) {
+  // for the download method case
   list($decrypted_aes_key, $attachmentAesKey) = get_keys($privatekey,$responseXML);
   $decryptedResult=decrypt_body_content($decrypted_aes_key,$responseXML);
   $decrypted_attachment=decryptAttachmentModeCBCNoDecode($attachmentAesKey, $responseXML);
@@ -793,7 +821,7 @@ function decrypt_body_content($decrypted_aes_key,$responseXML) {
   // Extract the ciphertext from the raw SOAP response
   // preg_match('/<xenc:CipherValue>(.*?)<\/xenc:CipherValue>/', $responseXML, $matches);
   preg_match_all('/<xenc:CipherValue>(.*?)<\/xenc:CipherValue>/', $responseXML, $matches);
-  var_dump($matches);
+  // var_dump($matches);
   $ciphertext = $matches[1][2];
   // echo "***body_content\n\n";
   // var_dump($ciphertext);
@@ -822,8 +850,8 @@ function get_keys($private_key,$responseXML) {
   // Decrypt AES key for SOAP body
   openssl_private_decrypt($aesKey, $decryptedAesKey, $privateKey);
 
-  // Output decrypted AES key for SOAP body
-  echo "Decrypted AES key for SOAP body: " . base64_encode($decryptedAesKey) . "\n\n";
+  // Output decrypted AES key for SOAP body for debugging
+  // echo "Decrypted AES key for SOAP body: " . base64_encode($decryptedAesKey) . "\n\n";
 
   // Extract AES key for attachment
   preg_match_all('/<xenc:CipherValue>(.*?)<\/xenc:CipherValue>/', $responseXML, $matches);
@@ -832,8 +860,8 @@ function get_keys($private_key,$responseXML) {
   // Decrypt AES key for attachment
   openssl_private_decrypt($aesKeyAttachment, $decryptedAesKeyAttachment, $privateKey);
 
-  // Output decrypted AES key for attachment
-  echo "Decrypted AES key for attachment: " . base64_encode($decryptedAesKeyAttachment) . "\n\n";
+  // Output decrypted AES key for attachment for debugging
+  // echo "Decrypted AES key for attachment: " . base64_encode($decryptedAesKeyAttachment) . "\n\n";
 
   // Return the decrypted AES keys
   return [$decryptedAesKey, $decryptedAesKeyAttachment];
@@ -886,7 +914,8 @@ function decryptAttachmentModeCBCNoDecode($attachmentAesKey, $rawResponse)
     $plaintext = substr($plaintext, 16);
 
     // echo "\n===============\n", utf8_decode($plaintext);
-  file_put_contents('attachment.txt', utf8_decode($plaintext));
+  // file_put_contents('attachment.txt', utf8_decode($plaintext));
+  return utf8_decode($plaintext);
 }
 
 

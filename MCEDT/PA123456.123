@@ -1,0 +1,2031 @@
+HR1V030BEAE000000  C720121015BRUYERE FAMILY HEALTH NETWORK 000001620 99999999  
+HR2                              75 BRUYERE STREET                             
+HR3OTTAWA          ON K1N5C8                                                   
+HR740 2012093000000264 COMP CARE CAPITATION                                    
+HR740 2012093000000008 GROUP MANAGEMENT LEADERSHIP PAYMENT                     
+HR740 2012093000000231 ACCESS BONUS PAYMENT                                    
+HR740 2012093000001117 NETWORK BASE RATE PAYMENT                               
+HR8**********************************************************************      
+HR8                          GROUP PAYMENT REPORT                              
+HR8                                                                            
+HR8                                                PAYMENT ACTIVITY            
+HR8                                        CURRENT MONTH             YTD       
+HR8PHYSICIAN                                                                   
+HR8  177253                                        13.81           13.81       
+HR8                                        -------------    ------------       
+HR8                           SUBTOTAL             13.81           13.81       
+HR8                                                                            
+HR8GROUP                                                                       
+HR8  GMLP                                           0.08            0.08       
+HR8  TOTAL ACCESS BONUS PAYMENT                     2.31            2.31       
+HR8                                        -------------    ------------       
+HR8                           SUBTOTAL              2.39            2.39       
+HR8                                                                            
+HR8                                        -------------    ------------       
+HR8TOTAL PAID TO GROUP                             16.20           16.20       
+HR8                                                                            
+HR8**********************************************************************      
+HR8                          GROUP TOTAL - SUMMARY REPORT                      
+HR8                                GROUP - BEAE                                
+HR8                                                                            
+HR8                                                PAYMENT ACTIVITY            
+HR8                                        CURRENT MONTH             YTD       
+HR8PHYSICIAN                                                                   
+HR8  TOTAL BASE RATE PAYMENT                       11.17           11.17       
+HR8  TOTAL CC CAPITATION PAYMENT                    2.64            2.64       
+HR8                                        -------------    ------------       
+HR8                           SUBTOTAL             13.81           13.81       
+HR8                                                                            
+HR8GROUP                                                                       
+HR8  GMLP                                           0.08            0.08       
+HR8  TOTAL ACCESS BONUS PAYMENT                     2.31            2.31       
+HR8                                        -------------    ------------       
+HR8                           SUBTOTAL              2.39            2.39       
+HR8                                                                            
+HR8                                        -------------    ------------       
+HR8TOTAL PAID TO GROUP                             16.20           16.20       
+HR8                                                                            
+HR8**********************************************************************      
+HR8              SUMMARY CATEGORIZATION OF CLAIMS                              
+HR8              REPORT PERIOD: 2012-09-01 TO 2012-09-30                       
+HR8              CORRESPONDING TO RA PAYMENTS: 10 OCT 2012                     
+HR8              PROVIDER: 010102 - CRABTREE, PAUL OMER                        
+HR8              NETWORK:  BRUYERE FAMILY HEALTH NETWORK                       
+HR8                                                                            
+HR8CATEGORY  TYPE OF       BILLING  PATIENTS ENCOUNTERS SERVICES   AMOUNT      
+HR8          CLAIM          NUMBER                                 PAID        
+HR8PRE-                                                                        
+HR8NETWORK    INCL & EXCL                                          $0.00       
+HR8                                     0         0       0        $0.00       
+HR8WSIB       INCL & EXCL                                          $0.00       
+HR8                                     0         0       0        $0.00       
+HR8ENROLLED   INCL                                                 $0.00       
+HR8           EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8NETWORK-   INCL                                                 $0.00       
+HR8COLLEAGUE  EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8NON-       INCL                                                 $0.00       
+HR8ENROLLED   EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8CURRENT MONTH'S TOTAL                0         0       0        $0.00       
+HR8**********************************************************************      
+HR8              SUMMARY CATEGORIZATION OF CLAIMS                              
+HR8              REPORT PERIOD: 2012-09-01 TO 2012-09-30                       
+HR8              CORRESPONDING TO RA PAYMENTS: 10 OCT 2012                     
+HR8              PROVIDER: 015439 - NG CHENG HIN, ALAN KENNETH                 
+HR8              NETWORK:  BRUYERE FAMILY HEALTH NETWORK                       
+HR8                                                                            
+HR8CATEGORY  TYPE OF       BILLING  PATIENTS ENCOUNTERS SERVICES   AMOUNT      
+HR8          CLAIM          NUMBER                                 PAID        
+HR8PRE-                                                                        
+HR8NETWORK    INCL & EXCL                                          $0.00       
+HR8                                     0         0       0        $0.00       
+HR8WSIB       INCL & EXCL                                          $0.00       
+HR8                                     0         0       0        $0.00       
+HR8ENROLLED   INCL                                                 $0.00       
+HR8           EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8NETWORK-   INCL                                                 $0.00       
+HR8COLLEAGUE  EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8NON-       INCL                                                 $0.00       
+HR8ENROLLED   EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8CURRENT MONTH'S TOTAL                0         0       0        $0.00       
+HR8**********************************************************************      
+HR8              SUMMARY CATEGORIZATION OF CLAIMS                              
+HR8              REPORT PERIOD: 2012-09-01 TO 2012-09-30                       
+HR8              CORRESPONDING TO RA PAYMENTS: 10 OCT 2012                     
+HR8              PROVIDER: 030130 - MAVRIPLIS, CLEO ANN                        
+HR8              NETWORK:  BRUYERE FAMILY HEALTH NETWORK                       
+HR8                                                                            
+HR8CATEGORY  TYPE OF       BILLING  PATIENTS ENCOUNTERS SERVICES   AMOUNT      
+HR8          CLAIM          NUMBER                                 PAID        
+HR8PRE-                                                                        
+HR8NETWORK    INCL & EXCL                                          $0.00       
+HR8                                     0         0       0        $0.00       
+HR8WSIB       INCL & EXCL                                          $0.00       
+HR8                                     0         0       0        $0.00       
+HR8ENROLLED   INCL                                                 $0.00       
+HR8           EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8NETWORK-   INCL                                                 $0.00       
+HR8COLLEAGUE  EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8NON-       INCL                                                 $0.00       
+HR8ENROLLED   EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8CURRENT MONTH'S TOTAL                0         0       0        $0.00       
+HR8**********************************************************************      
+HR8              SUMMARY CATEGORIZATION OF CLAIMS                              
+HR8              REPORT PERIOD: 2012-09-01 TO 2012-09-30                       
+HR8              CORRESPONDING TO RA PAYMENTS: 10 OCT 2012                     
+HR8              PROVIDER: 089680 - CARON, CATHERINE MARGARET                  
+HR8              NETWORK:  BRUYERE FAMILY HEALTH NETWORK                       
+HR8                                                                            
+HR8CATEGORY  TYPE OF       BILLING  PATIENTS ENCOUNTERS SERVICES   AMOUNT      
+HR8          CLAIM          NUMBER                                 PAID        
+HR8PRE-                                                                        
+HR8NETWORK    INCL & EXCL                                          $0.00       
+HR8                                     0         0       0        $0.00       
+HR8WSIB       INCL & EXCL                                          $0.00       
+HR8                                     0         0       0        $0.00       
+HR8ENROLLED   INCL                                                 $0.00       
+HR8           EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8NETWORK-   INCL                                                 $0.00       
+HR8COLLEAGUE  EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8NON-       INCL                                                 $0.00       
+HR8ENROLLED   EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8CURRENT MONTH'S TOTAL                0         0       0        $0.00       
+HR8**********************************************************************      
+HR8              SUMMARY CATEGORIZATION OF CLAIMS                              
+HR8              REPORT PERIOD: 2012-09-01 TO 2012-09-30                       
+HR8              CORRESPONDING TO RA PAYMENTS: 10 OCT 2012                     
+HR8              PROVIDER: 099945 - POTTIE, KEVIN CHRISTOPHER                  
+HR8              NETWORK:  BRUYERE FAMILY HEALTH NETWORK                       
+HR8                                                                            
+HR8CATEGORY  TYPE OF       BILLING  PATIENTS ENCOUNTERS SERVICES   AMOUNT      
+HR8          CLAIM          NUMBER                                 PAID        
+HR8PRE-                                                                        
+HR8NETWORK    INCL & EXCL                                          $0.00       
+HR8                                     0         0       0        $0.00       
+HR8WSIB       INCL & EXCL                                          $0.00       
+HR8                                     0         0       0        $0.00       
+HR8ENROLLED   INCL                                                 $0.00       
+HR8           EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8NETWORK-   INCL                                                 $0.00       
+HR8COLLEAGUE  EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8NON-       INCL                                                 $0.00       
+HR8ENROLLED   EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8CURRENT MONTH'S TOTAL                0         0       0        $0.00       
+HR8**********************************************************************      
+HR8              SUMMARY CATEGORIZATION OF CLAIMS                              
+HR8              REPORT PERIOD: 2012-09-01 TO 2012-09-30                       
+HR8              CORRESPONDING TO RA PAYMENTS: 10 OCT 2012                     
+HR8              PROVIDER: 117408 - CZARNOWSKI, CHARLES ZDZISLAW               
+HR8              NETWORK:  BRUYERE FAMILY HEALTH NETWORK                       
+HR8                                                                            
+HR8CATEGORY  TYPE OF       BILLING  PATIENTS ENCOUNTERS SERVICES   AMOUNT      
+HR8          CLAIM          NUMBER                                 PAID        
+HR8PRE-                                                                        
+HR8NETWORK    INCL & EXCL                                          $0.00       
+HR8                                     0         0       0        $0.00       
+HR8WSIB       INCL & EXCL                                          $0.00       
+HR8                                     0         0       0        $0.00       
+HR8ENROLLED   INCL                                                 $0.00       
+HR8           EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8NETWORK-   INCL                                                 $0.00       
+HR8COLLEAGUE  EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8NON-       INCL                                                 $0.00       
+HR8ENROLLED   EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8CURRENT MONTH'S TOTAL                0         0       0        $0.00       
+HR8**********************************************************************      
+HR8              SUMMARY CATEGORIZATION OF CLAIMS                              
+HR8              REPORT PERIOD: 2012-09-01 TO 2012-09-30                       
+HR8              CORRESPONDING TO RA PAYMENTS: 10 OCT 2012                     
+HR8              PROVIDER: 149450 - SHEARMAN, JOHN KENNETH                     
+HR8              NETWORK:  BRUYERE FAMILY HEALTH NETWORK                       
+HR8                                                                            
+HR8CATEGORY  TYPE OF       BILLING  PATIENTS ENCOUNTERS SERVICES   AMOUNT      
+HR8          CLAIM          NUMBER                                 PAID        
+HR8PRE-                                                                        
+HR8NETWORK    INCL & EXCL                                          $0.00       
+HR8                                     0         0       0        $0.00       
+HR8WSIB       INCL & EXCL                                          $0.00       
+HR8                                     0         0       0        $0.00       
+HR8ENROLLED   INCL                                                 $0.00       
+HR8           EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8NETWORK-   INCL                                                 $0.00       
+HR8COLLEAGUE  EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8NON-       INCL                                                 $0.00       
+HR8ENROLLED   EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8CURRENT MONTH'S TOTAL                0         0       0        $0.00       
+HR8**********************************************************************      
+HR8              SUMMARY CATEGORIZATION OF CLAIMS                              
+HR8              REPORT PERIOD: 2012-09-01 TO 2012-09-30                       
+HR8              CORRESPONDING TO RA PAYMENTS: 10 OCT 2012                     
+HR8              PROVIDER: 177253 - HOLLINGWORTH, GARY REGINALD                
+HR8              NETWORK:  BRUYERE FAMILY HEALTH NETWORK                       
+HR8                                                                            
+HR8CATEGORY  TYPE OF       BILLING  PATIENTS ENCOUNTERS SERVICES   AMOUNT      
+HR8          CLAIM          NUMBER                                 PAID        
+HR8PRE-                                                                        
+HR8NETWORK    INCL & EXCL                                          $0.00       
+HR8                                     0         0       0        $0.00       
+HR8WSIB       INCL & EXCL                                          $0.00       
+HR8                                     0         0       0        $0.00       
+HR8ENROLLED   INCL                                                 $0.00       
+HR8           EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8NETWORK-   INCL                                                 $0.00       
+HR8COLLEAGUE  EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8NON-       INCL                                                 $0.00       
+HR8ENROLLED   EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8CURRENT MONTH'S TOTAL                0         0       0        $0.00       
+HR8**********************************************************************      
+HR8              SUMMARY CATEGORIZATION OF CLAIMS                              
+HR8              REPORT PERIOD: 2012-09-01 TO 2012-09-30                       
+HR8              CORRESPONDING TO RA PAYMENTS: 10 OCT 2012                     
+HR8              PROVIDER: 206540 - BERNSTEIN, ROBERT MICHAEL                  
+HR8              NETWORK:  BRUYERE FAMILY HEALTH NETWORK                       
+HR8                                                                            
+HR8CATEGORY  TYPE OF       BILLING  PATIENTS ENCOUNTERS SERVICES   AMOUNT      
+HR8          CLAIM          NUMBER                                 PAID        
+HR8PRE-                                                                        
+HR8NETWORK    INCL & EXCL                                          $0.00       
+HR8                                     0         0       0        $0.00       
+HR8WSIB       INCL & EXCL                                          $0.00       
+HR8                                     0         0       0        $0.00       
+HR8ENROLLED   INCL                                                 $0.00       
+HR8           EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8NETWORK-   INCL                                                 $0.00       
+HR8COLLEAGUE  EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8NON-       INCL                                                 $0.00       
+HR8ENROLLED   EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8CURRENT MONTH'S TOTAL                0         0       0        $0.00       
+HR8**********************************************************************      
+HR8              SUMMARY CATEGORIZATION OF CLAIMS                              
+HR8              REPORT PERIOD: 2012-09-01 TO 2012-09-30                       
+HR8              CORRESPONDING TO RA PAYMENTS: 10 OCT 2012                     
+HR8              PROVIDER: 252130 - ELMSLIE, TOM JOHN                          
+HR8              NETWORK:  BRUYERE FAMILY HEALTH NETWORK                       
+HR8                                                                            
+HR8CATEGORY  TYPE OF       BILLING  PATIENTS ENCOUNTERS SERVICES   AMOUNT      
+HR8          CLAIM          NUMBER                                 PAID        
+HR8PRE-                                                                        
+HR8NETWORK    INCL & EXCL                                          $0.00       
+HR8                                     0         0       0        $0.00       
+HR8WSIB       INCL & EXCL                                          $0.00       
+HR8                                     0         0       0        $0.00       
+HR8ENROLLED   INCL                                                 $0.00       
+HR8           EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8NETWORK-   INCL                                                 $0.00       
+HR8COLLEAGUE  EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8NON-       INCL                                                 $0.00       
+HR8ENROLLED   EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8CURRENT MONTH'S TOTAL                0         0       0        $0.00       
+HR8**********************************************************************      
+HR8              SUMMARY CATEGORIZATION OF CLAIMS                              
+HR8              REPORT PERIOD: 2012-09-01 TO 2012-09-30                       
+HR8              CORRESPONDING TO RA PAYMENTS: 10 OCT 2012                     
+HR8              PROVIDER: 258715 - BOUCHER, FRANCOIS GILLES                   
+HR8              NETWORK:  BRUYERE FAMILY HEALTH NETWORK                       
+HR8                                                                            
+HR8CATEGORY  TYPE OF       BILLING  PATIENTS ENCOUNTERS SERVICES   AMOUNT      
+HR8          CLAIM          NUMBER                                 PAID        
+HR8PRE-                                                                        
+HR8NETWORK    INCL & EXCL                                          $0.00       
+HR8                                     0         0       0        $0.00       
+HR8WSIB       INCL & EXCL                                          $0.00       
+HR8                                     0         0       0        $0.00       
+HR8ENROLLED   INCL                                                 $0.00       
+HR8           EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8NETWORK-   INCL                                                 $0.00       
+HR8COLLEAGUE  EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8NON-       INCL                                                 $0.00       
+HR8ENROLLED   EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8CURRENT MONTH'S TOTAL                0         0       0        $0.00       
+HR8**********************************************************************      
+HR8              SUMMARY CATEGORIZATION OF CLAIMS                              
+HR8              REPORT PERIOD: 2012-09-01 TO 2012-09-30                       
+HR8              CORRESPONDING TO RA PAYMENTS: 10 OCT 2012                     
+HR8              PROVIDER: 279281 - KILBERTUS, FRANCES TERESA                  
+HR8              NETWORK:  BRUYERE FAMILY HEALTH NETWORK                       
+HR8                                                                            
+HR8CATEGORY  TYPE OF       BILLING  PATIENTS ENCOUNTERS SERVICES   AMOUNT      
+HR8          CLAIM          NUMBER                                 PAID        
+HR8PRE-                                                                        
+HR8NETWORK    INCL & EXCL                                          $0.00       
+HR8                                     0         0       0        $0.00       
+HR8WSIB       INCL & EXCL                                          $0.00       
+HR8                                     0         0       0        $0.00       
+HR8ENROLLED   INCL                                                 $0.00       
+HR8           EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8NETWORK-   INCL                                                 $0.00       
+HR8COLLEAGUE  EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8NON-       INCL                                                 $0.00       
+HR8ENROLLED   EXCL                                                 $0.00       
+HR8                                     0         0       0        $0.00       
+HR8CURRENT MONTH'S TOTAL                0         0       0        $0.00       
+HR8**********************************************************************      
+HR8            COMPREHENSIVE CARE CAPITATION PAYMENT SUMMARY REPORT            
+HR8            FOR THE PERIOD 2012-09-01 TO 2012-09-30                         
+HR8            FOR BEAE PROVIDER 177253 - HOLLINGWORTH, GARY                   
+HR8                                                                            
+HR8FEMALE                                                                      
+HR8                                                                            
+HR8 AGE        NUMBER OF      CAPITATION        MEMBER                         
+HR8RANGE        PATIENTS      RATE / DAY          DAYS             AMOUNT      
+HR8----------------------------------------------------------------------      
+HR8000-004             0         0.08240             0               0.00      
+HR8005-009             0         0.04406             0               0.00      
+HR8010-014             0         0.03753             0               0.00      
+HR8015-019             0         0.06690             0               0.00      
+HR8020-024             0         0.08485             0               0.00      
+HR8025-029             1         0.08811            30               2.64      
+HR8030-034             0         0.08811             0               0.00      
+HR8035-039             0         0.09546             0               0.00      
+HR8040-044             0         0.09791             0               0.00      
+HR8045-049             0         0.10606             0               0.00      
+HR8050-054             0         0.11912             0               0.00      
+HR8055-059             0         0.11993             0               0.00      
+HR8060-064             0         0.12320             0               0.00      
+HR8065-069             0         0.14918             0               0.00      
+HR8070-074             0         0.15950             0               0.00      
+HR8075-079             0         0.19047             0               0.00      
+HR8080-084             0         0.19703             0               0.00      
+HR8085-089             0         0.22424             0               0.00      
+HR8090-999             0         0.25333             0               0.00      
+HR8TOTAL FEMALE                                                      2.64      
+HR8                                                                            
+HR8MALE                                                                        
+HR8                                                                            
+HR8 AGE        NUMBER OF      CAPITATION        MEMBER                         
+HR8RANGE        PATIENTS      RATE / DAY          DAYS             AMOUNT      
+HR8----------------------------------------------------------------------      
+HR8000-004             0         0.08648             0               0.00      
+HR8005-009             0         0.04569             0               0.00      
+HR8010-014             0         0.03590             0               0.00      
+HR8015-019             0         0.03753             0               0.00      
+HR8020-024             0         0.03753             0               0.00      
+HR8025-029             0         0.04079             0               0.00      
+HR8030-034             0         0.04732             0               0.00      
+HR8035-039             0         0.05874             0               0.00      
+HR8040-044             0         0.06527             0               0.00      
+HR8045-049             0         0.07180             0               0.00      
+HR8050-054             0         0.08322             0               0.00      
+HR8055-059             0         0.09464             0               0.00      
+HR8060-064             0         0.10362             0               0.00      
+HR8065-069             0         0.13511             0               0.00      
+HR8070-074             0         0.15669             0               0.00      
+HR8075-079             0         0.18859             0               0.00      
+HR8080-084             0         0.19797             0               0.00      
+HR8085-089             0         0.22049             0               0.00      
+HR8090-999             0         0.24864             0               0.00      
+HR8TOTAL MALE                                                        0.00      
+HR8                                                                            
+HR8                                                                            
+HR8COMBINED TOTAL                                                    2.64      
+HR8**********************************************************************      
+HR8            BASE RATE PAYMENT SUMMARY REPORT                                
+HR8            FOR THE PERIOD 2012-09-01 TO 2012-09-30                         
+HR8            FOR BEAE PROVIDER 177253 - HOLLINGWORTH, GARY                   
+HR8                                                                            
+HR8FEMALE                                                                      
+HR8                                                                            
+HR8 AGE        NUMBER OF      CAPITATION        MEMBER                         
+HR8RANGE        PATIENTS      RATE / DAY          DAYS             AMOUNT      
+HR8----------------------------------------------------------------------      
+HR8000-004             0         0.35030             0               0.00      
+HR8005-009             0         0.18879             0               0.00      
+HR8010-014             0         0.16061             0               0.00      
+HR8015-019             0         0.28570             0               0.00      
+HR8020-024             0         0.35881             0               0.00      
+HR8025-029             1         0.37218            30              11.17      
+HR8030-034             0         0.37518             0               0.00      
+HR8035-039             0         0.40602             0               0.00      
+HR8040-044             0         0.41637             0               0.00      
+HR8045-049             0         0.45116             0               0.00      
+HR8050-054             0         0.50697             0               0.00      
+HR8055-059             0         0.51120             0               0.00      
+HR8060-064             0         0.52240             0               0.00      
+HR8065-069             0         0.63312             0               0.00      
+HR8070-074             0         0.67712             0               0.00      
+HR8075-079             0         0.80837             0               0.00      
+HR8080-084             0         0.83621             0               0.00      
+HR8085-089             0         0.95301             0               0.00      
+HR8090-999             0         1.07817             0               0.00      
+HR8TOTAL FEMALE                                                     11.17      
+HR8                                                                            
+HR8MALE                                                                        
+HR8                                                                            
+HR8 AGE        NUMBER OF      CAPITATION        MEMBER                         
+HR8RANGE        PATIENTS      RATE / DAY          DAYS             AMOUNT      
+HR8----------------------------------------------------------------------      
+HR8000-004             0         0.36772             0               0.00      
+HR8005-009             0         0.19205             0               0.00      
+HR8010-014             0         0.15334             0               0.00      
+HR8015-019             0         0.16036             0               0.00      
+HR8020-024             0         0.16027             0               0.00      
+HR8025-029             0         0.17400             0               0.00      
+HR8030-034             0         0.20177             0               0.00      
+HR8035-039             0         0.25015             0               0.00      
+HR8040-044             0         0.27806             0               0.00      
+HR8045-049             0         0.30574             0               0.00      
+HR8050-054             0         0.35465             0               0.00      
+HR8055-059             0         0.40363             0               0.00      
+HR8060-064             0         0.44256             0               0.00      
+HR8065-069             0         0.57319             0               0.00      
+HR8070-074             0         0.66506             0               0.00      
+HR8075-079             0         0.80044             0               0.00      
+HR8080-084             0         0.83840             0               0.00      
+HR8085-089             0         0.93592             0               0.00      
+HR8090-999             0         1.05710             0               0.00      
+HR8TOTAL MALE                                                        0.00      
+HR8                                                                            
+HR8TOTAL LTC           0         3.29495             0               0.00      
+HR8                                                                            
+HR8                                                                            
+HR8COMBINED TOTAL                                                   11.17      
+HR8**********************************************************************      
+HR8                                                                            
+HR8                      GROUP ACCESS BONUS SUMMARY REPORT                     
+HR8GROUP:       BEAE                                                           
+HR8                                                                            
+HR8                                       CURRENT MONTH              YTD       
+HR8  MAXIMUM SPECIAL PAYMENT                       2.31             2.31       
+HR8  ENROLLED PATIENTS OUTSIDE USE TOTAL            .00              .00       
+HR8  ACCESS BONUS CALCULATION                      2.31             2.31       
+HR8                                                                            
+HR8  ACCESS BONUS PAYMENT                          2.31             2.31       
+HR8**********************************************************************      
+HR8                                                                            
+HR8                                 GMLP REPORT                                
+HR8GROUP:       BEAE                                                           
+HR8                                                                            
+HR8       TOTAL ENROLLED PATIENTS                            1                 
+HR8       TOTAL MEMBER DAYS                                 30                 
+HR8       ADJUSTED MEMBER DAYS                               0                 
+HR8                                                                            
+HR8       CURRENT MONTH GMLP PAYMENT                       .08                 
+HR8       ADJUSTED GMLP PAYMENT                              0                 
+HR8                                                    --------                
+HR8       TOTAL GMLP PAYMENT                               .08                 
+HR8**********************************************************************      
+HR8                                                                            
+HR8         BLENDED FEE-FOR-SERVICE PREMIUM SUMMARY REPORT                     
+HR8                                                                            
+HR8       PHYSICIAN                               PREMIUM                      
+HR8NAME                      NUMBER       CURRENT            YTD               
+HR8CRABTREE, PAUL            010102           .00            .00               
+HR8JOHNSTON, MARY            010398           .00            .00               
+HR8TURLEY, JOLANDA           013253           .00            .00               
+HR8NG CHENG HIN, ALAN        015439           .00            .00               
+HR8BALLOU, STEPHEN           016340           .00            .00               
+HR8REZAIEFAR, PARISA         016702           .00            .00               
+HR8MARTIN, CARMEL            016821           .00            .00               
+HR8BRADY, JOLENE             017636           .00            .00               
+HR8KRISHNAMOORTHY, SUMITHA   017696           .00            .00               
+HR8YOUNG, DEIDRE             018412           .00            .00               
+HR8GEOFFRION, PAUL           018926           .00            .00               
+HR8RUGHANI, RAVI             018992           .00            .00               
+HR8RUSSELL, GRANT            019213           .00            .00               
+HR8DOUEK, JENNIFER           019399           .00            .00               
+HR8JOHNSTON, SHARON          019587           .00            .00               
+HR8ALDRIDGE, LISA            019677           .00            .00               
+HR8MAVRIPLIS, CLEO           030130           .00            .00               
+HR8GELLER, CAROL             042879           .00            .00               
+HR8CARON, CATHERINE          089680           .00            .00               
+HR8POTTIE, KEVIN             099945           .00            .00               
+HR8CZARNOWSKI, CHARLES       117408           .00            .00               
+HR8EYRE, ALLISON             130021           .00            .00               
+HR8SHEARMAN, JOHN            149450           .00            .00               
+HR8HOLLINGWORTH, GARY        177253           .00            .00               
+HR8BERNSTEIN, ROBERT         206540           .00            .00               
+HR8REARDON, MARY             214684           .00            .00               
+HR8ELMSLIE, TOM              252130           .00            .00               
+HR8BOUCHER, FRANCOIS         258715           .00            .00               
+HR8KILBERTUS, FRANCES        279281           .00            .00               
+HR8MCKIM, SUSANNE            282012           .00            .00               
+HR8TOTAL                                      .00            .00               
+HR8**********************************************************************      
+HR8            BASE RATE GROUP SUMMARY REPORT                                  
+HR8            FOR THE PERIOD 2012-09-01 TO 2012-09-30                         
+HR8            FOR BEAE - BRUYERE FAMILY HEALTH NETWORK                        
+HR8                                                                            
+HR8                                                                            
+HR8   PHYSICIAN   CURRENT         YTD            RECON          RECON          
+HR8    NUMBER      MONTH         TOTAL          CURRENT          YTD           
+HR8                                              MONTH                         
+HR8                                                                            
+HR8    177253         11.17          11.17           0.00           0.00       
+HR8                                                                            
+HR8TOTAL              11.17          11.17           0.00           0.00       
+HR8**********************************************************************      
+HR8            COMPREHENSIVE CARE GROUP SUMMARY REPORT                         
+HR8            FOR THE PERIOD 2012-09-01 TO 2012-09-30                         
+HR8            FOR BEAE - BRUYERE FAMILY HEALTH NETWORK                        
+HR8                                                                            
+HR8                                                                            
+HR8   PHYSICIAN   CURRENT         YTD            RECON          RECON          
+HR8    NUMBER      MONTH         TOTAL          CURRENT          YTD           
+HR8                                              MONTH                         
+HR8                                                                            
+HR8    177253          2.64           2.64           0.00           0.00       
+HR8                                                                            
+HR8TOTAL               2.64           2.64           0.00           0.00       
+HR8**********************************************************************      
+HR8                                                                            
+HR8                           PAYMENT SUMMARY REPORT                           
+HR8 PROVIDER    : DR PAUL CRABTREE                                             
+HR8 IDENTIFIER  : BEAE-010102                                                  
+HR8                                                  PHYSICIAN PAYMENT         
+HR8                                                       ACTIVITY             
+HR8PAYMENT DESCRIPTION                     CURRENT MONTH             YTD       
+HR8                                                                            
+HR8  BLENDED FEE-FOR-SERVICE PREMIUM                .00              .00       
+HR8                                                                            
+HR8ACCESS BONUS:                                                               
+HR8-------------                                                               
+HR8  MAXIMUM SPECIAL PAYMENT                        .00              .00       
+HR8  ENROLLED PATIENTS OUTSIDE USE TOTAL            .00              .00       
+HR8  ACCESS BONUS CALCULATION                       .00              .00       
+HR8  ACCESS BONUS PAYMENT                           .00              .00       
+HR8                                                                            
+HR8GMLP:                                                                       
+HR8-----                                                                       
+HR8  TOTAL ENROLLED PATIENTS             0                                     
+HR8  TOTAL MEMBER DAYS                   0                                     
+HR8  ADJUSTED MEMBER DAYS                0                                     
+HR8                                                                            
+HR8PREVENTIVE CARE BONUS ACCUMULATIONS AND PAYMENT:                            
+HR8------------------------------------------------                            
+HR8INFLUENZA VACCINE                    0%                                     
+HR8PAP SMEAR                            0%                                     
+HR8MAMMOGRAPHY                          0%                                     
+HR8CHILDHOOD IMMUNIZATION               0%                                     
+HR8COLORECTAL SCREENING                 0%                                     
+HR8CURRENT MONTH                      .00                                      
+HR8YTD                                .00                                      
+HR8                                                                            
+HR8  CME COMPENSATION                               .00              .00       
+HR8                                                                            
+HR8SPECIAL PREMIUMS:                                                           
+HR8-----------------                                                           
+HR8PREVIOUS FISCAL           PREMIUM ACCUMULATIONS       PREMIUM PAYMENT       
+HR8  (2011/2012)                 CURRENT               CURRENT                 
+HR8  -----------                  MONTH       YTD      MONTH        YTD        
+HR8                                                                            
+HR8  HOSPITAL:                                                                 
+HR8   MIN SERVICE LEVEL $2000                                                  
+HR8   PREMIUM ($5000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  LABOUR AND DELIVERY:                                                      
+HR8   MIN SERVICE LEVEL  5,  23                                                
+HR8   PREMIUM ($5000/$8000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  OFFICE PROCEDURES:                                                        
+HR8   MIN SERVICE LEVEL $1200                                                  
+HR8   PREMIUM ($2000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  PALLIATIVE CARE:                                                          
+HR8   MIN SERVICE LEVEL  4,  10                                                
+HR8   PREMIUM ($2000/$5000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  HOME VISITS:                                                              
+HR8   MIN SERVICE LEVEL  3/12    6/24    17/68                                 
+HR8   PREMIUM ($1000/$2000/$5000)                                              
+HR8                             PTS/SRV    PTS/SRV                             
+HR8                               0/0        0/0          .00        .00       
+HR8                                                                            
+HR8  PRENATAL:                                                                 
+HR8   MIN SERVICE LEVEL  5                                                     
+HR8   PREMIUM ($2000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  LONG TERM CARE:                                                           
+HR8   MIN SERVICE LEVEL  12,  36                                               
+HR8   PREMIUM ($2000/$5000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  PC-SMI:                                                                   
+HR8   MIN SERVICE LEVEL  5,  10                                                
+HR8   PREMIUM ($1000/$2000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                 ---------- ----------      
+HR8  PREVIOUS FISCAL TOTAL                               0.00       0.00       
+HR8                                                                            
+HR8SPECIAL PREMIUMS:                                                           
+HR8-----------------                                                           
+HR8CURRENT FISCAL            PREMIUM ACCUMULATIONS       PREMIUM PAYMENT       
+HR8  (2012/2013)                 CURRENT               CURRENT                 
+HR8  -----------                  MONTH       YTD      MONTH        YTD        
+HR8                                                                            
+HR8  HOSPITAL:                                                                 
+HR8   MIN SERVICE LEVEL $2000                                                  
+HR8   PREMIUM ($5000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  LABOUR AND DELIVERY:                                                      
+HR8   MIN SERVICE LEVEL  5,  23                                                
+HR8   PREMIUM ($5000/$8000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  OFFICE PROCEDURES:                                                        
+HR8   MIN SERVICE LEVEL $1200                                                  
+HR8   PREMIUM ($2000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  PALLIATIVE CARE:                                                          
+HR8   MIN SERVICE LEVEL  4,  10                                                
+HR8   PREMIUM ($2000/$5000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  HOME VISITS:                                                              
+HR8   MIN SERVICE LEVEL  3/12    6/24    17/68                                 
+HR8   PREMIUM ($1000/$2000/$5000)                                              
+HR8                             PTS/SRV    PTS/SRV                             
+HR8                               0/0        0/0          .00        .00       
+HR8                                                                            
+HR8  PRENATAL:                                                                 
+HR8   MIN SERVICE LEVEL  5                                                     
+HR8   PREMIUM ($2000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  LONG TERM CARE:                                                           
+HR8   MIN SERVICE LEVEL  12,  36                                               
+HR8   PREMIUM ($2000/$5000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  PC-SMI:                                                                   
+HR8   MIN SERVICE LEVEL  5,  10                                                
+HR8   PREMIUM ($1000/$2000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                 ---------- ----------      
+HR8  CURRENT FISCAL TOTAL                                0.00       0.00       
+HR8                                                                            
+HR8  PREVIOUS/CURRENT FISCAL TOTALS                      0.00       0.00       
+HR8                                                                            
+HR8                                                                            
+HR8PAID TO GROUP                                         0.00       0.00       
+HR8-------------                                                               
+HR8PAID TO PHYSICIAN                                     0.00       0.00       
+HR8-----------------                                                           
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8            BLENDED FEE-FOR-SERVICE PREMIUM DETAIL REPORT                   
+HR8                                                                            
+HR8 PROVIDER    : DR PAUL CRABTREE                                             
+HR8 IDENTIFIER  : BEAE-010102                                                  
+HR8 RATE        : 15.00%                                                       
+HR8                                                                            
+HR8         FSC       NUMBER OF    TOTAL FEE            PREMIUM                
+HR8                   SERVICES     APPROVED                                    
+HR8                                                                            
+HR8  ADJUSTED TOTALS       0                 .00            .00                
+HR8                                                                            
+HR8  MONTHLY TOTALS        0                 .00            .00                
+HR8                                                                            
+HR8  YTD TOTALS            0                 .00            .00                
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8                           PAYMENT SUMMARY REPORT                           
+HR8 PROVIDER    : DR MARY JOHNSTON                                             
+HR8 IDENTIFIER  : BEAE-010398                                                  
+HR8                                                  PHYSICIAN PAYMENT         
+HR8                                                       ACTIVITY             
+HR8PAYMENT DESCRIPTION                     CURRENT MONTH             YTD       
+HR8                                                                            
+HR8  BLENDED FEE-FOR-SERVICE PREMIUM                .00              .00       
+HR8                                                                            
+HR8  CME COMPENSATION                               .00              .00       
+HR8                                                                            
+HR8PAID TO GROUP                                         0.00       0.00       
+HR8-------------                                                               
+HR8PAID TO PHYSICIAN                                     0.00       0.00       
+HR8-----------------                                                           
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8            BLENDED FEE-FOR-SERVICE PREMIUM DETAIL REPORT                   
+HR8                                                                            
+HR8 PROVIDER    : DR MARY JOHNSTON                                             
+HR8 IDENTIFIER  : BEAE-010398                                                  
+HR8 RATE        : 15.00%                                                       
+HR8                                                                            
+HR8         FSC       NUMBER OF    TOTAL FEE            PREMIUM                
+HR8                   SERVICES     APPROVED                                    
+HR8                                                                            
+HR8  ADJUSTED TOTALS       0                 .00            .00                
+HR8                                                                            
+HR8  MONTHLY TOTALS        0                 .00            .00                
+HR8                                                                            
+HR8  YTD TOTALS            0                 .00            .00                
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8                           PAYMENT SUMMARY REPORT                           
+HR8 PROVIDER    : DR JOLANDA TURLEY                                            
+HR8 IDENTIFIER  : BEAE-013253                                                  
+HR8                                                  PHYSICIAN PAYMENT         
+HR8                                                       ACTIVITY             
+HR8PAYMENT DESCRIPTION                     CURRENT MONTH             YTD       
+HR8                                                                            
+HR8  BLENDED FEE-FOR-SERVICE PREMIUM                .00              .00       
+HR8                                                                            
+HR8  CME COMPENSATION                               .00              .00       
+HR8                                                                            
+HR8PAID TO GROUP                                         0.00       0.00       
+HR8-------------                                                               
+HR8PAID TO PHYSICIAN                                     0.00       0.00       
+HR8-----------------                                                           
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8            BLENDED FEE-FOR-SERVICE PREMIUM DETAIL REPORT                   
+HR8                                                                            
+HR8 PROVIDER    : DR JOLANDA TURLEY                                            
+HR8 IDENTIFIER  : BEAE-013253                                                  
+HR8 RATE        : 15.00%                                                       
+HR8                                                                            
+HR8         FSC       NUMBER OF    TOTAL FEE            PREMIUM                
+HR8                   SERVICES     APPROVED                                    
+HR8                                                                            
+HR8  ADJUSTED TOTALS       0                 .00            .00                
+HR8                                                                            
+HR8  MONTHLY TOTALS        0                 .00            .00                
+HR8                                                                            
+HR8  YTD TOTALS            0                 .00            .00                
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8                           PAYMENT SUMMARY REPORT                           
+HR8 PROVIDER    : DR ALAN NG CHENG HIN                                         
+HR8 IDENTIFIER  : BEAE-015439                                                  
+HR8                                                  PHYSICIAN PAYMENT         
+HR8                                                       ACTIVITY             
+HR8PAYMENT DESCRIPTION                     CURRENT MONTH             YTD       
+HR8                                                                            
+HR8  BLENDED FEE-FOR-SERVICE PREMIUM                .00              .00       
+HR8                                                                            
+HR8ACCESS BONUS:                                                               
+HR8-------------                                                               
+HR8  MAXIMUM SPECIAL PAYMENT                        .00              .00       
+HR8  ENROLLED PATIENTS OUTSIDE USE TOTAL            .00              .00       
+HR8  ACCESS BONUS CALCULATION                       .00              .00       
+HR8  ACCESS BONUS PAYMENT                           .00              .00       
+HR8                                                                            
+HR8GMLP:                                                                       
+HR8-----                                                                       
+HR8  TOTAL ENROLLED PATIENTS             0                                     
+HR8  TOTAL MEMBER DAYS                   0                                     
+HR8  ADJUSTED MEMBER DAYS                0                                     
+HR8                                                                            
+HR8PREVENTIVE CARE BONUS ACCUMULATIONS AND PAYMENT:                            
+HR8------------------------------------------------                            
+HR8INFLUENZA VACCINE                    0%                                     
+HR8PAP SMEAR                            0%                                     
+HR8MAMMOGRAPHY                          0%                                     
+HR8CHILDHOOD IMMUNIZATION               0%                                     
+HR8COLORECTAL SCREENING                 0%                                     
+HR8CURRENT MONTH                      .00                                      
+HR8YTD                                .00                                      
+HR8                                                                            
+HR8  CME COMPENSATION                               .00              .00       
+HR8                                                                            
+HR8SPECIAL PREMIUMS:                                                           
+HR8-----------------                                                           
+HR8PREVIOUS FISCAL           PREMIUM ACCUMULATIONS       PREMIUM PAYMENT       
+HR8  (2011/2012)                 CURRENT               CURRENT                 
+HR8  -----------                  MONTH       YTD      MONTH        YTD        
+HR8                                                                            
+HR8  HOSPITAL:                                                                 
+HR8   MIN SERVICE LEVEL $2000                                                  
+HR8   PREMIUM ($5000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  LABOUR AND DELIVERY:                                                      
+HR8   MIN SERVICE LEVEL  5,  23                                                
+HR8   PREMIUM ($5000/$8000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  OFFICE PROCEDURES:                                                        
+HR8   MIN SERVICE LEVEL $1200                                                  
+HR8   PREMIUM ($2000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  PALLIATIVE CARE:                                                          
+HR8   MIN SERVICE LEVEL  4,  10                                                
+HR8   PREMIUM ($2000/$5000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  HOME VISITS:                                                              
+HR8   MIN SERVICE LEVEL  3/12    6/24    17/68                                 
+HR8   PREMIUM ($1000/$2000/$5000)                                              
+HR8                             PTS/SRV    PTS/SRV                             
+HR8                               0/0        0/0          .00        .00       
+HR8                                                                            
+HR8  PRENATAL:                                                                 
+HR8   MIN SERVICE LEVEL  5                                                     
+HR8   PREMIUM ($2000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  LONG TERM CARE:                                                           
+HR8   MIN SERVICE LEVEL  12,  36                                               
+HR8   PREMIUM ($2000/$5000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  PC-SMI:                                                                   
+HR8   MIN SERVICE LEVEL  5,  10                                                
+HR8   PREMIUM ($1000/$2000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                 ---------- ----------      
+HR8  PREVIOUS FISCAL TOTAL                               0.00       0.00       
+HR8                                                                            
+HR8SPECIAL PREMIUMS:                                                           
+HR8-----------------                                                           
+HR8CURRENT FISCAL            PREMIUM ACCUMULATIONS       PREMIUM PAYMENT       
+HR8  (2012/2013)                 CURRENT               CURRENT                 
+HR8  -----------                  MONTH       YTD      MONTH        YTD        
+HR8                                                                            
+HR8  HOSPITAL:                                                                 
+HR8   MIN SERVICE LEVEL $2000                                                  
+HR8   PREMIUM ($5000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  LABOUR AND DELIVERY:                                                      
+HR8   MIN SERVICE LEVEL  5,  23                                                
+HR8   PREMIUM ($5000/$8000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  OFFICE PROCEDURES:                                                        
+HR8   MIN SERVICE LEVEL $1200                                                  
+HR8   PREMIUM ($2000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  PALLIATIVE CARE:                                                          
+HR8   MIN SERVICE LEVEL  4,  10                                                
+HR8   PREMIUM ($2000/$5000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  HOME VISITS:                                                              
+HR8   MIN SERVICE LEVEL  3/12    6/24    17/68                                 
+HR8   PREMIUM ($1000/$2000/$5000)                                              
+HR8                             PTS/SRV    PTS/SRV                             
+HR8                               0/0        0/0          .00        .00       
+HR8                                                                            
+HR8  PRENATAL:                                                                 
+HR8   MIN SERVICE LEVEL  5                                                     
+HR8   PREMIUM ($2000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  LONG TERM CARE:                                                           
+HR8   MIN SERVICE LEVEL  12,  36                                               
+HR8   PREMIUM ($2000/$5000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  PC-SMI:                                                                   
+HR8   MIN SERVICE LEVEL  5,  10                                                
+HR8   PREMIUM ($1000/$2000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                 ---------- ----------      
+HR8  CURRENT FISCAL TOTAL                                0.00       0.00       
+HR8                                                                            
+HR8  PREVIOUS/CURRENT FISCAL TOTALS                      0.00       0.00       
+HR8                                                                            
+HR8                                                                            
+HR8PAID TO GROUP                                         0.00       0.00       
+HR8-------------                                                               
+HR8PAID TO PHYSICIAN                                     0.00       0.00       
+HR8-----------------                                                           
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8            BLENDED FEE-FOR-SERVICE PREMIUM DETAIL REPORT                   
+HR8                                                                            
+HR8 PROVIDER    : DR ALAN NG CHENG HIN                                         
+HR8 IDENTIFIER  : BEAE-015439                                                  
+HR8 RATE        : 15.00%                                                       
+HR8                                                                            
+HR8         FSC       NUMBER OF    TOTAL FEE            PREMIUM                
+HR8                   SERVICES     APPROVED                                    
+HR8                                                                            
+HR8  ADJUSTED TOTALS       0                 .00            .00                
+HR8                                                                            
+HR8  MONTHLY TOTALS        0                 .00            .00                
+HR8                                                                            
+HR8  YTD TOTALS            0                 .00            .00                
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8                           PAYMENT SUMMARY REPORT                           
+HR8 PROVIDER    : DR STEPHEN BALLOU                                            
+HR8 IDENTIFIER  : BEAE-016340                                                  
+HR8                                                  PHYSICIAN PAYMENT         
+HR8                                                       ACTIVITY             
+HR8PAYMENT DESCRIPTION                     CURRENT MONTH             YTD       
+HR8                                                                            
+HR8  BLENDED FEE-FOR-SERVICE PREMIUM                .00              .00       
+HR8                                                                            
+HR8  CME COMPENSATION                               .00              .00       
+HR8                                                                            
+HR8PAID TO GROUP                                         0.00       0.00       
+HR8-------------                                                               
+HR8PAID TO PHYSICIAN                                     0.00       0.00       
+HR8-----------------                                                           
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8            BLENDED FEE-FOR-SERVICE PREMIUM DETAIL REPORT                   
+HR8                                                                            
+HR8 PROVIDER    : DR STEPHEN BALLOU                                            
+HR8 IDENTIFIER  : BEAE-016340                                                  
+HR8 RATE        : 15.00%                                                       
+HR8                                                                            
+HR8         FSC       NUMBER OF    TOTAL FEE            PREMIUM                
+HR8                   SERVICES     APPROVED                                    
+HR8                                                                            
+HR8  ADJUSTED TOTALS       0                 .00            .00                
+HR8                                                                            
+HR8  MONTHLY TOTALS        0                 .00            .00                
+HR8                                                                            
+HR8  YTD TOTALS            0                 .00            .00                
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8                           PAYMENT SUMMARY REPORT                           
+HR8 PROVIDER    : DR PARISA REZAIEFAR                                          
+HR8 IDENTIFIER  : BEAE-016702                                                  
+HR8                                                  PHYSICIAN PAYMENT         
+HR8                                                       ACTIVITY             
+HR8PAYMENT DESCRIPTION                     CURRENT MONTH             YTD       
+HR8                                                                            
+HR8  BLENDED FEE-FOR-SERVICE PREMIUM                .00              .00       
+HR8                                                                            
+HR8  CME COMPENSATION                               .00              .00       
+HR8                                                                            
+HR8PAID TO GROUP                                         0.00       0.00       
+HR8-------------                                                               
+HR8PAID TO PHYSICIAN                                     0.00       0.00       
+HR8-----------------                                                           
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8            BLENDED FEE-FOR-SERVICE PREMIUM DETAIL REPORT                   
+HR8                                                                            
+HR8 PROVIDER    : DR PARISA REZAIEFAR                                          
+HR8 IDENTIFIER  : BEAE-016702                                                  
+HR8 RATE        : 15.00%                                                       
+HR8                                                                            
+HR8         FSC       NUMBER OF    TOTAL FEE            PREMIUM                
+HR8                   SERVICES     APPROVED                                    
+HR8                                                                            
+HR8  ADJUSTED TOTALS       0                 .00            .00                
+HR8                                                                            
+HR8  MONTHLY TOTALS        0                 .00            .00                
+HR8                                                                            
+HR8  YTD TOTALS            0                 .00            .00                
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8                           PAYMENT SUMMARY REPORT                           
+HR8 PROVIDER    : DR CARMEL MARTIN                                             
+HR8 IDENTIFIER  : BEAE-016821                                                  
+HR8                                                  PHYSICIAN PAYMENT         
+HR8                                                       ACTIVITY             
+HR8PAYMENT DESCRIPTION                     CURRENT MONTH             YTD       
+HR8                                                                            
+HR8  BLENDED FEE-FOR-SERVICE PREMIUM                .00              .00       
+HR8                                                                            
+HR8  CME COMPENSATION                               .00              .00       
+HR8                                                                            
+HR8PAID TO GROUP                                         0.00       0.00       
+HR8-------------                                                               
+HR8PAID TO PHYSICIAN                                     0.00       0.00       
+HR8-----------------                                                           
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8            BLENDED FEE-FOR-SERVICE PREMIUM DETAIL REPORT                   
+HR8                                                                            
+HR8 PROVIDER    : DR CARMEL MARTIN                                             
+HR8 IDENTIFIER  : BEAE-016821                                                  
+HR8 RATE        : 15.00%                                                       
+HR8                                                                            
+HR8         FSC       NUMBER OF    TOTAL FEE            PREMIUM                
+HR8                   SERVICES     APPROVED                                    
+HR8                                                                            
+HR8  ADJUSTED TOTALS       0                 .00            .00                
+HR8                                                                            
+HR8  MONTHLY TOTALS        0                 .00            .00                
+HR8                                                                            
+HR8  YTD TOTALS            0                 .00            .00                
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8                           PAYMENT SUMMARY REPORT                           
+HR8 PROVIDER    : DR JOLENE BRADY                                              
+HR8 IDENTIFIER  : BEAE-017636                                                  
+HR8                                                  PHYSICIAN PAYMENT         
+HR8                                                       ACTIVITY             
+HR8PAYMENT DESCRIPTION                     CURRENT MONTH             YTD       
+HR8                                                                            
+HR8  BLENDED FEE-FOR-SERVICE PREMIUM                .00              .00       
+HR8                                                                            
+HR8  CME COMPENSATION                               .00              .00       
+HR8                                                                            
+HR8PAID TO GROUP                                         0.00       0.00       
+HR8-------------                                                               
+HR8PAID TO PHYSICIAN                                     0.00       0.00       
+HR8-----------------                                                           
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8            BLENDED FEE-FOR-SERVICE PREMIUM DETAIL REPORT                   
+HR8                                                                            
+HR8 PROVIDER    : DR JOLENE BRADY                                              
+HR8 IDENTIFIER  : BEAE-017636                                                  
+HR8 RATE        : 15.00%                                                       
+HR8                                                                            
+HR8         FSC       NUMBER OF    TOTAL FEE            PREMIUM                
+HR8                   SERVICES     APPROVED                                    
+HR8                                                                            
+HR8  ADJUSTED TOTALS       0                 .00            .00                
+HR8                                                                            
+HR8  MONTHLY TOTALS        0                 .00            .00                
+HR8                                                                            
+HR8  YTD TOTALS            0                 .00            .00                
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8                           PAYMENT SUMMARY REPORT                           
+HR8 PROVIDER    : DR SUMITHA KRISHNAMOORTHY                                    
+HR8 IDENTIFIER  : BEAE-017696                                                  
+HR8                                                  PHYSICIAN PAYMENT         
+HR8                                                       ACTIVITY             
+HR8PAYMENT DESCRIPTION                     CURRENT MONTH             YTD       
+HR8                                                                            
+HR8  BLENDED FEE-FOR-SERVICE PREMIUM                .00              .00       
+HR8                                                                            
+HR8  CME COMPENSATION                               .00              .00       
+HR8                                                                            
+HR8PAID TO GROUP                                         0.00       0.00       
+HR8-------------                                                               
+HR8PAID TO PHYSICIAN                                     0.00       0.00       
+HR8-----------------                                                           
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8            BLENDED FEE-FOR-SERVICE PREMIUM DETAIL REPORT                   
+HR8                                                                            
+HR8 PROVIDER    : DR SUMITHA KRISHNAMOORTHY                                    
+HR8 IDENTIFIER  : BEAE-017696                                                  
+HR8 RATE        : 15.00%                                                       
+HR8                                                                            
+HR8         FSC       NUMBER OF    TOTAL FEE            PREMIUM                
+HR8                   SERVICES     APPROVED                                    
+HR8                                                                            
+HR8  ADJUSTED TOTALS       0                 .00            .00                
+HR8                                                                            
+HR8  MONTHLY TOTALS        0                 .00            .00                
+HR8                                                                            
+HR8  YTD TOTALS            0                 .00            .00                
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8                           PAYMENT SUMMARY REPORT                           
+HR8 PROVIDER    : DR DEIDRE YOUNG                                              
+HR8 IDENTIFIER  : BEAE-018412                                                  
+HR8                                                  PHYSICIAN PAYMENT         
+HR8                                                       ACTIVITY             
+HR8PAYMENT DESCRIPTION                     CURRENT MONTH             YTD       
+HR8                                                                            
+HR8  BLENDED FEE-FOR-SERVICE PREMIUM                .00              .00       
+HR8                                                                            
+HR8  CME COMPENSATION                               .00              .00       
+HR8                                                                            
+HR8PAID TO GROUP                                         0.00       0.00       
+HR8-------------                                                               
+HR8PAID TO PHYSICIAN                                     0.00       0.00       
+HR8-----------------                                                           
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8            BLENDED FEE-FOR-SERVICE PREMIUM DETAIL REPORT                   
+HR8                                                                            
+HR8 PROVIDER    : DR DEIDRE YOUNG                                              
+HR8 IDENTIFIER  : BEAE-018412                                                  
+HR8 RATE        : 15.00%                                                       
+HR8                                                                            
+HR8         FSC       NUMBER OF    TOTAL FEE            PREMIUM                
+HR8                   SERVICES     APPROVED                                    
+HR8                                                                            
+HR8  ADJUSTED TOTALS       0                 .00            .00                
+HR8                                                                            
+HR8  MONTHLY TOTALS        0                 .00            .00                
+HR8                                                                            
+HR8  YTD TOTALS            0                 .00            .00                
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8                           PAYMENT SUMMARY REPORT                           
+HR8 PROVIDER    : DR PAUL GEOFFRION                                            
+HR8 IDENTIFIER  : BEAE-018926                                                  
+HR8                                                  PHYSICIAN PAYMENT         
+HR8                                                       ACTIVITY             
+HR8PAYMENT DESCRIPTION                     CURRENT MONTH             YTD       
+HR8                                                                            
+HR8  BLENDED FEE-FOR-SERVICE PREMIUM                .00              .00       
+HR8                                                                            
+HR8  CME COMPENSATION                               .00              .00       
+HR8                                                                            
+HR8PAID TO GROUP                                         0.00       0.00       
+HR8-------------                                                               
+HR8PAID TO PHYSICIAN                                     0.00       0.00       
+HR8-----------------                                                           
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8            BLENDED FEE-FOR-SERVICE PREMIUM DETAIL REPORT                   
+HR8                                                                            
+HR8 PROVIDER    : DR PAUL GEOFFRION                                            
+HR8 IDENTIFIER  : BEAE-018926                                                  
+HR8 RATE        : 15.00%                                                       
+HR8                                                                            
+HR8         FSC       NUMBER OF    TOTAL FEE            PREMIUM                
+HR8                   SERVICES     APPROVED                                    
+HR8                                                                            
+HR8  ADJUSTED TOTALS       0                 .00            .00                
+HR8                                                                            
+HR8  MONTHLY TOTALS        0                 .00            .00                
+HR8                                                                            
+HR8  YTD TOTALS            0                 .00            .00                
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8                           PAYMENT SUMMARY REPORT                           
+HR8 PROVIDER    : DR RAVI RUGHANI                                              
+HR8 IDENTIFIER  : BEAE-018992                                                  
+HR8                                                  PHYSICIAN PAYMENT         
+HR8                                                       ACTIVITY             
+HR8PAYMENT DESCRIPTION                     CURRENT MONTH             YTD       
+HR8                                                                            
+HR8  BLENDED FEE-FOR-SERVICE PREMIUM                .00              .00       
+HR8                                                                            
+HR8  CME COMPENSATION                               .00              .00       
+HR8                                                                            
+HR8PAID TO GROUP                                         0.00       0.00       
+HR8-------------                                                               
+HR8PAID TO PHYSICIAN                                     0.00       0.00       
+HR8-----------------                                                           
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8            BLENDED FEE-FOR-SERVICE PREMIUM DETAIL REPORT                   
+HR8                                                                            
+HR8 PROVIDER    : DR RAVI RUGHANI                                              
+HR8 IDENTIFIER  : BEAE-018992                                                  
+HR8 RATE        : 15.00%                                                       
+HR8                                                                            
+HR8         FSC       NUMBER OF    TOTAL FEE            PREMIUM                
+HR8                   SERVICES     APPROVED                                    
+HR8                                                                            
+HR8  ADJUSTED TOTALS       0                 .00            .00                
+HR8                                                                            
+HR8  MONTHLY TOTALS        0                 .00            .00                
+HR8                                                                            
+HR8  YTD TOTALS            0                 .00            .00                
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8                           PAYMENT SUMMARY REPORT                           
+HR8 PROVIDER    : DR GRANT RUSSELL                                             
+HR8 IDENTIFIER  : BEAE-019213                                                  
+HR8                                                  PHYSICIAN PAYMENT         
+HR8                                                       ACTIVITY             
+HR8PAYMENT DESCRIPTION                     CURRENT MONTH             YTD       
+HR8                                                                            
+HR8  BLENDED FEE-FOR-SERVICE PREMIUM                .00              .00       
+HR8                                                                            
+HR8  CME COMPENSATION                               .00              .00       
+HR8                                                                            
+HR8PAID TO GROUP                                         0.00       0.00       
+HR8-------------                                                               
+HR8PAID TO PHYSICIAN                                     0.00       0.00       
+HR8-----------------                                                           
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8            BLENDED FEE-FOR-SERVICE PREMIUM DETAIL REPORT                   
+HR8                                                                            
+HR8 PROVIDER    : DR GRANT RUSSELL                                             
+HR8 IDENTIFIER  : BEAE-019213                                                  
+HR8 RATE        : 15.00%                                                       
+HR8                                                                            
+HR8         FSC       NUMBER OF    TOTAL FEE            PREMIUM                
+HR8                   SERVICES     APPROVED                                    
+HR8                                                                            
+HR8  ADJUSTED TOTALS       0                 .00            .00                
+HR8                                                                            
+HR8  MONTHLY TOTALS        0                 .00            .00                
+HR8                                                                            
+HR8  YTD TOTALS            0                 .00            .00                
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8                           PAYMENT SUMMARY REPORT                           
+HR8 PROVIDER    : DR JENNIFER DOUEK                                            
+HR8 IDENTIFIER  : BEAE-019399                                                  
+HR8                                                  PHYSICIAN PAYMENT         
+HR8                                                       ACTIVITY             
+HR8PAYMENT DESCRIPTION                     CURRENT MONTH             YTD       
+HR8                                                                            
+HR8  BLENDED FEE-FOR-SERVICE PREMIUM                .00              .00       
+HR8                                                                            
+HR8  CME COMPENSATION                               .00              .00       
+HR8                                                                            
+HR8PAID TO GROUP                                         0.00       0.00       
+HR8-------------                                                               
+HR8PAID TO PHYSICIAN                                     0.00       0.00       
+HR8-----------------                                                           
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8            BLENDED FEE-FOR-SERVICE PREMIUM DETAIL REPORT                   
+HR8                                                                            
+HR8 PROVIDER    : DR JENNIFER DOUEK                                            
+HR8 IDENTIFIER  : BEAE-019399                                                  
+HR8 RATE        : 15.00%                                                       
+HR8                                                                            
+HR8         FSC       NUMBER OF    TOTAL FEE            PREMIUM                
+HR8                   SERVICES     APPROVED                                    
+HR8                                                                            
+HR8  ADJUSTED TOTALS       0                 .00            .00                
+HR8                                                                            
+HR8  MONTHLY TOTALS        0                 .00            .00                
+HR8                                                                            
+HR8  YTD TOTALS            0                 .00            .00                
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8                           PAYMENT SUMMARY REPORT                           
+HR8 PROVIDER    : DR SHARON JOHNSTON                                           
+HR8 IDENTIFIER  : BEAE-019587                                                  
+HR8                                                  PHYSICIAN PAYMENT         
+HR8                                                       ACTIVITY             
+HR8PAYMENT DESCRIPTION                     CURRENT MONTH             YTD       
+HR8                                                                            
+HR8  BLENDED FEE-FOR-SERVICE PREMIUM                .00              .00       
+HR8                                                                            
+HR8  CME COMPENSATION                               .00              .00       
+HR8                                                                            
+HR8PAID TO GROUP                                         0.00       0.00       
+HR8-------------                                                               
+HR8PAID TO PHYSICIAN                                     0.00       0.00       
+HR8-----------------                                                           
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8            BLENDED FEE-FOR-SERVICE PREMIUM DETAIL REPORT                   
+HR8                                                                            
+HR8 PROVIDER    : DR SHARON JOHNSTON                                           
+HR8 IDENTIFIER  : BEAE-019587                                                  
+HR8 RATE        : 15.00%                                                       
+HR8                                                                            
+HR8         FSC       NUMBER OF    TOTAL FEE            PREMIUM                
+HR8                   SERVICES     APPROVED                                    
+HR8                                                                            
+HR8  ADJUSTED TOTALS       0                 .00            .00                
+HR8                                                                            
+HR8  MONTHLY TOTALS        0                 .00            .00                
+HR8                                                                            
+HR8  YTD TOTALS            0                 .00            .00                
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8                           PAYMENT SUMMARY REPORT                           
+HR8 PROVIDER    : DR LISA ALDRIDGE                                             
+HR8 IDENTIFIER  : BEAE-019677                                                  
+HR8                                                  PHYSICIAN PAYMENT         
+HR8                                                       ACTIVITY             
+HR8PAYMENT DESCRIPTION                     CURRENT MONTH             YTD       
+HR8                                                                            
+HR8  BLENDED FEE-FOR-SERVICE PREMIUM                .00              .00       
+HR8                                                                            
+HR8  CME COMPENSATION                               .00              .00       
+HR8                                                                            
+HR8PAID TO GROUP                                         0.00       0.00       
+HR8-------------                                                               
+HR8PAID TO PHYSICIAN                                     0.00       0.00       
+HR8-----------------                                                           
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8            BLENDED FEE-FOR-SERVICE PREMIUM DETAIL REPORT                   
+HR8                                                                            
+HR8 PROVIDER    : DR LISA ALDRIDGE                                             
+HR8 IDENTIFIER  : BEAE-019677                                                  
+HR8 RATE        : 15.00%                                                       
+HR8                                                                            
+HR8         FSC       NUMBER OF    TOTAL FEE            PREMIUM                
+HR8                   SERVICES     APPROVED                                    
+HR8                                                                            
+HR8  ADJUSTED TOTALS       0                 .00            .00                
+HR8                                                                            
+HR8  MONTHLY TOTALS        0                 .00            .00                
+HR8                                                                            
+HR8  YTD TOTALS            0                 .00            .00                
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8                           PAYMENT SUMMARY REPORT                           
+HR8 PROVIDER    : DR CLEO MAVRIPLIS                                            
+HR8 IDENTIFIER  : BEAE-030130                                                  
+HR8                                                  PHYSICIAN PAYMENT         
+HR8                                                       ACTIVITY             
+HR8PAYMENT DESCRIPTION                     CURRENT MONTH             YTD       
+HR8                                                                            
+HR8  BLENDED FEE-FOR-SERVICE PREMIUM                .00              .00       
+HR8                                                                            
+HR8ACCESS BONUS:                                                               
+HR8-------------                                                               
+HR8  MAXIMUM SPECIAL PAYMENT                        .00              .00       
+HR8  ENROLLED PATIENTS OUTSIDE USE TOTAL            .00              .00       
+HR8  ACCESS BONUS CALCULATION                       .00              .00       
+HR8  ACCESS BONUS PAYMENT                           .00              .00       
+HR8                                                                            
+HR8GMLP:                                                                       
+HR8-----                                                                       
+HR8  TOTAL ENROLLED PATIENTS             0                                     
+HR8  TOTAL MEMBER DAYS                   0                                     
+HR8  ADJUSTED MEMBER DAYS                0                                     
+HR8                                                                            
+HR8PREVENTIVE CARE BONUS ACCUMULATIONS AND PAYMENT:                            
+HR8------------------------------------------------                            
+HR8INFLUENZA VACCINE                    0%                                     
+HR8PAP SMEAR                            0%                                     
+HR8MAMMOGRAPHY                          0%                                     
+HR8CHILDHOOD IMMUNIZATION               0%                                     
+HR8COLORECTAL SCREENING                 0%                                     
+HR8CURRENT MONTH                      .00                                      
+HR8YTD                                .00                                      
+HR8                                                                            
+HR8  CME COMPENSATION                               .00              .00       
+HR8                                                                            
+HR8SPECIAL PREMIUMS:                                                           
+HR8-----------------                                                           
+HR8PREVIOUS FISCAL           PREMIUM ACCUMULATIONS       PREMIUM PAYMENT       
+HR8  (2011/2012)                 CURRENT               CURRENT                 
+HR8  -----------                  MONTH       YTD      MONTH        YTD        
+HR8                                                                            
+HR8  HOSPITAL:                                                                 
+HR8   MIN SERVICE LEVEL $2000                                                  
+HR8   PREMIUM ($5000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  LABOUR AND DELIVERY:                                                      
+HR8   MIN SERVICE LEVEL  5,  23                                                
+HR8   PREMIUM ($5000/$8000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  OFFICE PROCEDURES:                                                        
+HR8   MIN SERVICE LEVEL $1200                                                  
+HR8   PREMIUM ($2000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  PALLIATIVE CARE:                                                          
+HR8   MIN SERVICE LEVEL  4,  10                                                
+HR8   PREMIUM ($2000/$5000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  HOME VISITS:                                                              
+HR8   MIN SERVICE LEVEL  3/12    6/24    17/68                                 
+HR8   PREMIUM ($1000/$2000/$5000)                                              
+HR8                             PTS/SRV    PTS/SRV                             
+HR8                               0/0        0/0          .00        .00       
+HR8                                                                            
+HR8  PRENATAL:                                                                 
+HR8   MIN SERVICE LEVEL  5                                                     
+HR8   PREMIUM ($2000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  LONG TERM CARE:                                                           
+HR8   MIN SERVICE LEVEL  12,  36                                               
+HR8   PREMIUM ($2000/$5000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  PC-SMI:                                                                   
+HR8   MIN SERVICE LEVEL  5,  10                                                
+HR8   PREMIUM ($1000/$2000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                 ---------- ----------      
+HR8  PREVIOUS FISCAL TOTAL                               0.00       0.00       
+HR8                                                                            
+HR8SPECIAL PREMIUMS:                                                           
+HR8-----------------                                                           
+HR8CURRENT FISCAL            PREMIUM ACCUMULATIONS       PREMIUM PAYMENT       
+HR8  (2012/2013)                 CURRENT               CURRENT                 
+HR8  -----------                  MONTH       YTD      MONTH        YTD        
+HR8                                                                            
+HR8  HOSPITAL:                                                                 
+HR8   MIN SERVICE LEVEL $2000                                                  
+HR8   PREMIUM ($5000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  LABOUR AND DELIVERY:                                                      
+HR8   MIN SERVICE LEVEL  5,  23                                                
+HR8   PREMIUM ($5000/$8000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  OFFICE PROCEDURES:                                                        
+HR8   MIN SERVICE LEVEL $1200                                                  
+HR8   PREMIUM ($2000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  PALLIATIVE CARE:                                                          
+HR8   MIN SERVICE LEVEL  4,  10                                                
+HR8   PREMIUM ($2000/$5000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  HOME VISITS:                                                              
+HR8   MIN SERVICE LEVEL  3/12    6/24    17/68                                 
+HR8   PREMIUM ($1000/$2000/$5000)                                              
+HR8                             PTS/SRV    PTS/SRV                             
+HR8                               0/0        0/0          .00        .00       
+HR8                                                                            
+HR8  PRENATAL:                                                                 
+HR8   MIN SERVICE LEVEL  5                                                     
+HR8   PREMIUM ($2000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  LONG TERM CARE:                                                           
+HR8   MIN SERVICE LEVEL  12,  36                                               
+HR8   PREMIUM ($2000/$5000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  PC-SMI:                                                                   
+HR8   MIN SERVICE LEVEL  5,  10                                                
+HR8   PREMIUM ($1000/$2000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                 ---------- ----------      
+HR8  CURRENT FISCAL TOTAL                                0.00       0.00       
+HR8                                                                            
+HR8  PREVIOUS/CURRENT FISCAL TOTALS                      0.00       0.00       
+HR8                                                                            
+HR8                                                                            
+HR8PAID TO GROUP                                         0.00       0.00       
+HR8-------------                                                               
+HR8PAID TO PHYSICIAN                                     0.00       0.00       
+HR8-----------------                                                           
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8            BLENDED FEE-FOR-SERVICE PREMIUM DETAIL REPORT                   
+HR8                                                                            
+HR8 PROVIDER    : DR CLEO MAVRIPLIS                                            
+HR8 IDENTIFIER  : BEAE-030130                                                  
+HR8 RATE        : 15.00%                                                       
+HR8                                                                            
+HR8         FSC       NUMBER OF    TOTAL FEE            PREMIUM                
+HR8                   SERVICES     APPROVED                                    
+HR8                                                                            
+HR8  ADJUSTED TOTALS       0                 .00            .00                
+HR8                                                                            
+HR8  MONTHLY TOTALS        0                 .00            .00                
+HR8                                                                            
+HR8  YTD TOTALS            0                 .00            .00                
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8                           PAYMENT SUMMARY REPORT                           
+HR8 PROVIDER    : DR CAROL GELLER                                              
+HR8 IDENTIFIER  : BEAE-042879                                                  
+HR8                                                  PHYSICIAN PAYMENT         
+HR8                                                       ACTIVITY             
+HR8PAYMENT DESCRIPTION                     CURRENT MONTH             YTD       
+HR8                                                                            
+HR8  BLENDED FEE-FOR-SERVICE PREMIUM                .00              .00       
+HR8                                                                            
+HR8  CME COMPENSATION                               .00              .00       
+HR8                                                                            
+HR8PAID TO GROUP                                         0.00       0.00       
+HR8-------------                                                               
+HR8PAID TO PHYSICIAN                                     0.00       0.00       
+HR8-----------------                                                           
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8            BLENDED FEE-FOR-SERVICE PREMIUM DETAIL REPORT                   
+HR8                                                                            
+HR8 PROVIDER    : DR CAROL GELLER                                              
+HR8 IDENTIFIER  : BEAE-042879                                                  
+HR8 RATE        : 15.00%                                                       
+HR8                                                                            
+HR8         FSC       NUMBER OF    TOTAL FEE            PREMIUM                
+HR8                   SERVICES     APPROVED                                    
+HR8                                                                            
+HR8  ADJUSTED TOTALS       0                 .00            .00                
+HR8                                                                            
+HR8  MONTHLY TOTALS        0                 .00            .00                
+HR8                                                                            
+HR8  YTD TOTALS            0                 .00            .00                
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8                           PAYMENT SUMMARY REPORT                           
+HR8 PROVIDER    : DR CATHERINE CARON                                           
+HR8 IDENTIFIER  : BEAE-089680                                                  
+HR8                                                  PHYSICIAN PAYMENT         
+HR8                                                       ACTIVITY             
+HR8PAYMENT DESCRIPTION                     CURRENT MONTH             YTD       
+HR8                                                                            
+HR8  BLENDED FEE-FOR-SERVICE PREMIUM                .00              .00       
+HR8                                                                            
+HR8ACCESS BONUS:                                                               
+HR8-------------                                                               
+HR8  MAXIMUM SPECIAL PAYMENT                        .00              .00       
+HR8  ENROLLED PATIENTS OUTSIDE USE TOTAL            .00              .00       
+HR8  ACCESS BONUS CALCULATION                       .00              .00       
+HR8  ACCESS BONUS PAYMENT                           .00              .00       
+HR8                                                                            
+HR8GMLP:                                                                       
+HR8-----                                                                       
+HR8  TOTAL ENROLLED PATIENTS             0                                     
+HR8  TOTAL MEMBER DAYS                   0                                     
+HR8  ADJUSTED MEMBER DAYS                0                                     
+HR8                                                                            
+HR8PREVENTIVE CARE BONUS ACCUMULATIONS AND PAYMENT:                            
+HR8------------------------------------------------                            
+HR8INFLUENZA VACCINE                    0%                                     
+HR8PAP SMEAR                            0%                                     
+HR8MAMMOGRAPHY                          0%                                     
+HR8CHILDHOOD IMMUNIZATION               0%                                     
+HR8COLORECTAL SCREENING                 0%                                     
+HR8CURRENT MONTH                      .00                                      
+HR8YTD                                .00                                      
+HR8                                                                            
+HR8  CME COMPENSATION                               .00              .00       
+HR8                                                                            
+HR8SPECIAL PREMIUMS:                                                           
+HR8-----------------                                                           
+HR8PREVIOUS FISCAL           PREMIUM ACCUMULATIONS       PREMIUM PAYMENT       
+HR8  (2011/2012)                 CURRENT               CURRENT                 
+HR8  -----------                  MONTH       YTD      MONTH        YTD        
+HR8                                                                            
+HR8  HOSPITAL:                                                                 
+HR8   MIN SERVICE LEVEL $2000                                                  
+HR8   PREMIUM ($5000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  LABOUR AND DELIVERY:                                                      
+HR8   MIN SERVICE LEVEL  5,  23                                                
+HR8   PREMIUM ($5000/$8000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  OFFICE PROCEDURES:                                                        
+HR8   MIN SERVICE LEVEL $1200                                                  
+HR8   PREMIUM ($2000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  PALLIATIVE CARE:                                                          
+HR8   MIN SERVICE LEVEL  4,  10                                                
+HR8   PREMIUM ($2000/$5000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  HOME VISITS:                                                              
+HR8   MIN SERVICE LEVEL  3/12    6/24    17/68                                 
+HR8   PREMIUM ($1000/$2000/$5000)                                              
+HR8                             PTS/SRV    PTS/SRV                             
+HR8                               0/0        0/0          .00        .00       
+HR8                                                                            
+HR8  PRENATAL:                                                                 
+HR8   MIN SERVICE LEVEL  5                                                     
+HR8   PREMIUM ($2000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  LONG TERM CARE:                                                           
+HR8   MIN SERVICE LEVEL  12,  36                                               
+HR8   PREMIUM ($2000/$5000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  PC-SMI:                                                                   
+HR8   MIN SERVICE LEVEL  5,  10                                                
+HR8   PREMIUM ($1000/$2000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                 ---------- ----------      
+HR8  PREVIOUS FISCAL TOTAL                               0.00       0.00       
+HR8                                                                            
+HR8SPECIAL PREMIUMS:                                                           
+HR8-----------------                                                           
+HR8CURRENT FISCAL            PREMIUM ACCUMULATIONS       PREMIUM PAYMENT       
+HR8  (2012/2013)                 CURRENT               CURRENT                 
+HR8  -----------                  MONTH       YTD      MONTH        YTD        
+HR8                                                                            
+HR8  HOSPITAL:                                                                 
+HR8   MIN SERVICE LEVEL $2000                                                  
+HR8   PREMIUM ($5000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  LABOUR AND DELIVERY:                                                      
+HR8   MIN SERVICE LEVEL  5,  23                                                
+HR8   PREMIUM ($5000/$8000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  OFFICE PROCEDURES:                                                        
+HR8   MIN SERVICE LEVEL $1200                                                  
+HR8   PREMIUM ($2000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  PALLIATIVE CARE:                                                          
+HR8   MIN SERVICE LEVEL  4,  10                                                
+HR8   PREMIUM ($2000/$5000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  HOME VISITS:                                                              
+HR8   MIN SERVICE LEVEL  3/12    6/24    17/68                                 
+HR8   PREMIUM ($1000/$2000/$5000)                                              
+HR8                             PTS/SRV    PTS/SRV                             
+HR8                               0/0        0/0          .00        .00       
+HR8                                                                            
+HR8  PRENATAL:                                                                 
+HR8   MIN SERVICE LEVEL  5                                                     
+HR8   PREMIUM ($2000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  LONG TERM CARE:                                                           
+HR8   MIN SERVICE LEVEL  12,  36                                               
+HR8   PREMIUM ($2000/$5000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  PC-SMI:                                                                   
+HR8   MIN SERVICE LEVEL  5,  10                                                
+HR8   PREMIUM ($1000/$2000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                 ---------- ----------      
+HR8  CURRENT FISCAL TOTAL                                0.00       0.00       
+HR8                                                                            
+HR8  PREVIOUS/CURRENT FISCAL TOTALS                      0.00       0.00       
+HR8                                                                            
+HR8                                                                            
+HR8PAID TO GROUP                                         0.00       0.00       
+HR8-------------                                                               
+HR8PAID TO PHYSICIAN                                     0.00       0.00       
+HR8-----------------                                                           
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8            BLENDED FEE-FOR-SERVICE PREMIUM DETAIL REPORT                   
+HR8                                                                            
+HR8 PROVIDER    : DR CATHERINE CARON                                           
+HR8 IDENTIFIER  : BEAE-089680                                                  
+HR8 RATE        : 15.00%                                                       
+HR8                                                                            
+HR8         FSC       NUMBER OF    TOTAL FEE            PREMIUM                
+HR8                   SERVICES     APPROVED                                    
+HR8                                                                            
+HR8  ADJUSTED TOTALS       0                 .00            .00                
+HR8                                                                            
+HR8  MONTHLY TOTALS        0                 .00            .00                
+HR8                                                                            
+HR8  YTD TOTALS            0                 .00            .00                
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8                           PAYMENT SUMMARY REPORT                           
+HR8 PROVIDER    : DR KEVIN POTTIE                                              
+HR8 IDENTIFIER  : BEAE-099945                                                  
+HR8                                                  PHYSICIAN PAYMENT         
+HR8                                                       ACTIVITY             
+HR8PAYMENT DESCRIPTION                     CURRENT MONTH             YTD       
+HR8                                                                            
+HR8  BLENDED FEE-FOR-SERVICE PREMIUM                .00              .00       
+HR8                                                                            
+HR8ACCESS BONUS:                                                               
+HR8-------------                                                               
+HR8  MAXIMUM SPECIAL PAYMENT                        .00              .00       
+HR8  ENROLLED PATIENTS OUTSIDE USE TOTAL            .00              .00       
+HR8  ACCESS BONUS CALCULATION                       .00              .00       
+HR8  ACCESS BONUS PAYMENT                           .00              .00       
+HR8                                                                            
+HR8GMLP:                                                                       
+HR8-----                                                                       
+HR8  TOTAL ENROLLED PATIENTS             0                                     
+HR8  TOTAL MEMBER DAYS                   0                                     
+HR8  ADJUSTED MEMBER DAYS                0                                     
+HR8                                                                            
+HR8PREVENTIVE CARE BONUS ACCUMULATIONS AND PAYMENT:                            
+HR8------------------------------------------------                            
+HR8INFLUENZA VACCINE                    0%                                     
+HR8PAP SMEAR                            0%                                     
+HR8MAMMOGRAPHY                          0%                                     
+HR8CHILDHOOD IMMUNIZATION               0%                                     
+HR8COLORECTAL SCREENING                 0%                                     
+HR8CURRENT MONTH                      .00                                      
+HR8YTD                                .00                                      
+HR8                                                                            
+HR8  CME COMPENSATION                               .00              .00       
+HR8                                                                            
+HR8SPECIAL PREMIUMS:                                                           
+HR8-----------------                                                           
+HR8PREVIOUS FISCAL           PREMIUM ACCUMULATIONS       PREMIUM PAYMENT       
+HR8  (2011/2012)                 CURRENT               CURRENT                 
+HR8  -----------                  MONTH       YTD      MONTH        YTD        
+HR8                                                                            
+HR8  HOSPITAL:                                                                 
+HR8   MIN SERVICE LEVEL $2000                                                  
+HR8   PREMIUM ($5000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  LABOUR AND DELIVERY:                                                      
+HR8   MIN SERVICE LEVEL  5,  23                                                
+HR8   PREMIUM ($5000/$8000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  OFFICE PROCEDURES:                                                        
+HR8   MIN SERVICE LEVEL $1200                                                  
+HR8   PREMIUM ($2000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  PALLIATIVE CARE:                                                          
+HR8   MIN SERVICE LEVEL  4,  10                                                
+HR8   PREMIUM ($2000/$5000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  HOME VISITS:                                                              
+HR8   MIN SERVICE LEVEL  3/12    6/24    17/68                                 
+HR8   PREMIUM ($1000/$2000/$5000)                                              
+HR8                             PTS/SRV    PTS/SRV                             
+HR8                               0/0        0/0          .00        .00       
+HR8                                                                            
+HR8  PRENATAL:                                                                 
+HR8   MIN SERVICE LEVEL  5                                                     
+HR8   PREMIUM ($2000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  LONG TERM CARE:                                                           
+HR8   MIN SERVICE LEVEL  12,  36                                               
+HR8   PREMIUM ($2000/$5000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  PC-SMI:                                                                   
+HR8   MIN SERVICE LEVEL  5,  10                                                
+HR8   PREMIUM ($1000/$2000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                 ---------- ----------      
+HR8  PREVIOUS FISCAL TOTAL                               0.00       0.00       
+HR8                                                                            
+HR8SPECIAL PREMIUMS:                                                           
+HR8-----------------                                                           
+HR8CURRENT FISCAL            PREMIUM ACCUMULATIONS       PREMIUM PAYMENT       
+HR8  (2012/2013)                 CURRENT               CURRENT                 
+HR8  -----------                  MONTH       YTD      MONTH        YTD        
+HR8                                                                            
+HR8  HOSPITAL:                                                                 
+HR8   MIN SERVICE LEVEL $2000                                                  
+HR8   PREMIUM ($5000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  LABOUR AND DELIVERY:                                                      
+HR8   MIN SERVICE LEVEL  5,  23                                                
+HR8   PREMIUM ($5000/$8000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  OFFICE PROCEDURES:                                                        
+HR8   MIN SERVICE LEVEL $1200                                                  
+HR8   PREMIUM ($2000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  PALLIATIVE CARE:                                                          
+HR8   MIN SERVICE LEVEL  4,  10                                                
+HR8   PREMIUM ($2000/$5000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  HOME VISITS:                                                              
+HR8   MIN SERVICE LEVEL  3/12    6/24    17/68                                 
+HR8   PREMIUM ($1000/$2000/$5000)                                              
+HR8                             PTS/SRV    PTS/SRV                             
+HR8                               0/0        0/0          .00        .00       
+HR8                                                                            
+HR8  PRENATAL:                                                                 
+HR8   MIN SERVICE LEVEL  5                                                     
+HR8   PREMIUM ($2000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  LONG TERM CARE:                                                           
+HR8   MIN SERVICE LEVEL  12,  36                                               
+HR8   PREMIUM ($2000/$5000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  PC-SMI:                                                                   
+HR8   MIN SERVICE LEVEL  5,  10                                                
+HR8   PREMIUM ($1000/$2000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                 ---------- ----------      
+HR8  CURRENT FISCAL TOTAL                                0.00       0.00       
+HR8                                                                            
+HR8  PREVIOUS/CURRENT FISCAL TOTALS                      0.00       0.00       
+HR8                                                                            
+HR8                                                                            
+HR8PAID TO GROUP                                         0.00       0.00       
+HR8-------------                                                               
+HR8PAID TO PHYSICIAN                                     0.00       0.00       
+HR8-----------------                                                           
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8            BLENDED FEE-FOR-SERVICE PREMIUM DETAIL REPORT                   
+HR8                                                                            
+HR8 PROVIDER    : DR KEVIN POTTIE                                              
+HR8 IDENTIFIER  : BEAE-099945                                                  
+HR8 RATE        : 15.00%                                                       
+HR8                                                                            
+HR8         FSC       NUMBER OF    TOTAL FEE            PREMIUM                
+HR8                   SERVICES     APPROVED                                    
+HR8                                                                            
+HR8  ADJUSTED TOTALS       0                 .00            .00                
+HR8                                                                            
+HR8  MONTHLY TOTALS        0                 .00            .00                
+HR8                                                                            
+HR8  YTD TOTALS            0                 .00            .00                
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8                           PAYMENT SUMMARY REPORT                           
+HR8 PROVIDER    : DR CHARLES CZARNOWSKI                                        
+HR8 IDENTIFIER  : BEAE-117408                                                  
+HR8                                                  PHYSICIAN PAYMENT         
+HR8                                                       ACTIVITY             
+HR8PAYMENT DESCRIPTION                     CURRENT MONTH             YTD       
+HR8                                                                            
+HR8  BLENDED FEE-FOR-SERVICE PREMIUM                .00              .00       
+HR8                                                                            
+HR8ACCESS BONUS:                                                               
+HR8-------------                                                               
+HR8  MAXIMUM SPECIAL PAYMENT                        .00              .00       
+HR8  ENROLLED PATIENTS OUTSIDE USE TOTAL            .00              .00       
+HR8  ACCESS BONUS CALCULATION                       .00              .00       
+HR8  ACCESS BONUS PAYMENT                           .00              .00       
+HR8                                                                            
+HR8GMLP:                                                                       
+HR8-----                                                                       
+HR8  TOTAL ENROLLED PATIENTS             0                                     
+HR8  TOTAL MEMBER DAYS                   0                                     
+HR8  ADJUSTED MEMBER DAYS                0                                     
+HR8                                                                            
+HR8PREVENTIVE CARE BONUS ACCUMULATIONS AND PAYMENT:                            
+HR8------------------------------------------------                            
+HR8INFLUENZA VACCINE                    0%                                     
+HR8PAP SMEAR                            0%                                     
+HR8MAMMOGRAPHY                          0%                                     
+HR8CHILDHOOD IMMUNIZATION               0%                                     
+HR8COLORECTAL SCREENING                 0%                                     
+HR8CURRENT MONTH                      .00                                      
+HR8YTD                                .00                                      
+HR8                                                                            
+HR8  CME COMPENSATION                               .00              .00       
+HR8                                                                            
+HR8SPECIAL PREMIUMS:                                                           
+HR8-----------------                                                           
+HR8PREVIOUS FISCAL           PREMIUM ACCUMULATIONS       PREMIUM PAYMENT       
+HR8  (2011/2012)                 CURRENT               CURRENT                 
+HR8  -----------                  MONTH       YTD      MONTH        YTD        
+HR8                                                                            
+HR8  HOSPITAL:                                                                 
+HR8   MIN SERVICE LEVEL $2000                                                  
+HR8   PREMIUM ($5000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  LABOUR AND DELIVERY:                                                      
+HR8   MIN SERVICE LEVEL  5,  23                                                
+HR8   PREMIUM ($5000/$8000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  OFFICE PROCEDURES:                                                        
+HR8   MIN SERVICE LEVEL $1200                                                  
+HR8   PREMIUM ($2000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  PALLIATIVE CARE:                                                          
+HR8   MIN SERVICE LEVEL  4,  10                                                
+HR8   PREMIUM ($2000/$5000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  HOME VISITS:                                                              
+HR8   MIN SERVICE LEVEL  3/12    6/24    17/68                                 
+HR8   PREMIUM ($1000/$2000/$5000)                                              
+HR8                             PTS/SRV    PTS/SRV                             
+HR8                               0/0        0/0          .00        .00       
+HR8                                                                            
+HR8  PRENATAL:                                                                 
+HR8   MIN SERVICE LEVEL  5                                                     
+HR8   PREMIUM ($2000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  LONG TERM CARE:                                                           
+HR8   MIN SERVICE LEVEL  12,  36                                               
+HR8   PREMIUM ($2000/$5000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  PC-SMI:                                                                   
+HR8   MIN SERVICE LEVEL  5,  10                                                
+HR8   PREMIUM ($1000/$2000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                 ---------- ----------      
+HR8  PREVIOUS FISCAL TOTAL                               0.00       0.00       
+HR8                                                                            
+HR8SPECIAL PREMIUMS:                                                           
+HR8-----------------                                                           
+HR8CURRENT FISCAL            PREMIUM ACCUMULATIONS       PREMIUM PAYMENT       
+HR8  (2012/2013)                 CURRENT               CURRENT                 
+HR8  -----------                  MONTH       YTD      MONTH        YTD        
+HR8                                                                            
+HR8  HOSPITAL:                                                                 
+HR8   MIN SERVICE LEVEL $2000                                                  
+HR8   PREMIUM ($5000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  LABOUR AND DELIVERY:                                                      
+HR8   MIN SERVICE LEVEL  5,  23                                                
+HR8   PREMIUM ($5000/$8000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  OFFICE PROCEDURES:                                                        
+HR8   MIN SERVICE LEVEL $1200                                                  
+HR8   PREMIUM ($2000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  PALLIATIVE CARE:                                                          
+HR8   MIN SERVICE LEVEL  4,  10                                                
+HR8   PREMIUM ($2000/$5000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  HOME VISITS:                                                              
+HR8   MIN SERVICE LEVEL  3/12    6/24    17/68                                 
+HR8   PREMIUM ($1000/$2000/$5000)                                              
+HR8                             PTS/SRV    PTS/SRV                             
+HR8                               0/0        0/0          .00        .00       
+HR8                                                                            
+HR8  PRENATAL:                                                                 
+HR8   MIN SERVICE LEVEL  5                                                     
+HR8   PREMIUM ($2000)                                                          
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  LONG TERM CARE:                                                           
+HR8   MIN SERVICE LEVEL  12,  36                                               
+HR8   PREMIUM ($2000/$5000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                                            
+HR8  PC-SMI:                                                                   
+HR8   MIN SERVICE LEVEL  5,  10                                                
+HR8   PREMIUM ($1000/$2000)                                                    
+HR8                                 .00        .00        .00        .00       
+HR8                                                 ---------- ----------      
+HR8  CURRENT FISCAL TOTAL                                0.00       0.00       
+HR8                                                                            
+HR8  PREVIOUS/CURRENT FISCAL TOTALS                      0.00       0.00       
+HR8                                                                            
+HR8                                                                            
+HR8PAID TO GROUP                                         0.00       0.00       
+HR8-------------                                                               
+HR8PAID TO PHYSICIAN                                     0.00       0.00       
+HR8-----------------                                                           
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8            BLENDED FEE-FOR-SERVICE PREMIUM DETAIL REPORT                   
+HR8                                                                            
+HR8 PROVIDER    : DR CHARLES CZARNOWSKI                                        
+HR8 IDENTIFIER  : BEAE-117408                                                  
+HR8 RATE        : 15.00%                                                       
+HR8                                                                            
+HR8         FSC       NUMBER OF    TOTAL FEE            PREMIUM                
+HR8                   SERVICES     APPROVED                                    
+HR8                                                                            
+HR8  ADJUSTED TOTALS       0                 .00            .00                
+HR8                                                                            
+HR8  MONTHLY TOTALS        0                 .00            .00                
+HR8                                                                            
+HR8  YTD TOTALS            0                 .00            .00                
+HR8----------------------------------------------------------------------      
+HR8**********************************************************************      
+HR8                                                                            
+HR8                           PAYMENT SUMMARY REPORT                           
+HR8 PROVIDER    : DR ALLISON EYRE                                              
+HR8 IDENTIFIER  : BEAE-130021                                                  
+HR8                                                  PHYSICIAN PAYMENT         
+HR8                                                       ACTIVITY             
+HR8PAYMENT DESCRIPTION                     CURRENT MONTH             YTD       
+HR8                                                                            
+HR8  BLENDED FEE-FOR-SERVICE PREMIUM                .00              .00       
