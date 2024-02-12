@@ -464,214 +464,69 @@ function sendrequest($xmlPayload) {
     // Output the response
     return [$serverStatus,$response];
   }
-function sendrequest_1($xmlPayload) {
-  $url = 'https://ws.conf.ebs.health.gov.on.ca:1443/EDTService/EDTService';
-  // this is the same as https://204.41.14.200:1443/EDTService/EDTService in WSDL
-  // better to use the domain name instead of IP, matches with the SSL certificate.
 
-  global $method, $claimfile;
-  switch ($method) {
-    // upload and update use the same MIME message structure
-    case 'upload':
-    case 'update':
-      $fileContent = file_get_contents($claimfile);
 
-      // Boundary for the multipart message
-      // Generate a random boundary string, to avoid collision with msg content
-      // $boundary = '----=' . bin2hex(random_bytes(16));
-      $boundary = '----=Boundary_' . md5(uniqid(time()));
+/* Mike's original decrypt function that would not work for decrypting the downloaded attachment. John rewrote function to handle decrypting attachment, and wrote a separate function to decrypt XML reponse from server for other methods other than download.
 
-      // Construct the MIME message
-      $mimeMessage = "--$boundary\r\n";
-      $mimeMessage .= "Content-Type: application/xop+xml; charset=UTF-8; type=\"text/xml\"\r\n";
-      $mimeMessage .= "Content-Transfer-Encoding: 8bit\r\n";
-      $mimeMessage .= "Content-ID: <rootpart@soapui.org>\r\n\r\n";
-      // there must be an extra line break between header and soap envelope
-      $mimeMessage .= "$xmlPayload\r\n";
-      $mimeMessage .= "--$boundary\r\n";
-      // $mimeMessage .= "Content-Type: application/octet-stream;       name=$contentId\r\n";
-      // $mimeMessage .= "Content-Transfer-Encoding: binary\r\n";
-      $mimeMessage .= "Content-Type: text/plain; charset=us-ascii\r\n";
-      $mimeMessage .= "Content-Transfer-Encoding: 7bit\r\n";
-      // contentId is just the file name e.g. HL8012345.001
-      $mimeMessage .= "Content-ID: <mykiboy>\r\n";
-      $mimeMessage .= "Content-Disposition: attachment;   name=\"$claimfile\"\r\n\r\n";
-      $mimeMessage .= "$fileContent\r\n";
-      $mimeMessage .= "--$boundary--";
+function decryptResponse($response) {
+  // input encrypted server response, output decrypted result XML
+  // first need to extract xml from MIME message for the download method
+  // Define the pattern to extract content between <soapenv> tags
+  $pattern = '/<soapenv:Envelope[^>]*>.*?<\/soapenv:Envelope>/s';
+  // Perform the regular expression match
+  preg_match($pattern, $response, $matches);
+  // Extracted content between and including <soapenv> tags
+  $soapenvContent = $matches[0];
+  // Now, you can create SimpleXML object from $soapenvContent
+  $xml = simplexml_load_string($soapenvContent);
 
-      $headers = [
-        "Content-Type:multipart/related; type=\"application/xop+xml\"; start=\"<rootpart@soapui.org>\"; start-info=\"text/xml\"; boundary=\"$boundary\"",
-        'MIME-Version: 1.0',
-        // 'User-Agent: Apache-HttpClient/4.5.5 (Java/16.0.2)',
-        // 'Connection: Keep-Alive',
-        // 'Accept-Encoding: gzip, deflate',
-        // 'Authorization: Basic Y29uZnN1KzQyN0BnbWFpbC5jb206UGFzc3dvcmQyIQ==',
-        // 'SOAPAction: ""',
-        // "Content-Length:".strlen($mimeMessage), //xmlPayload
-      ];
+  // Register the 'xenc' namespace
+  $xml->registerXPathNamespace('xenc', 'http://www.w3.org/2001/04/xmlenc#');
 
-      $xmlPayload = $mimeMessage;
-      break;
+  // Use XPath to select the CipherValue
+  $cipherValues = $xml->xpath('//xenc:CipherValue');
 
-    // case 'value3':
-    //   // Code to execute if $method equals 'value3'
-    //   break;
+  // Check if CipherValues were found
+  if (!empty($cipherValues)) {
+    // Decrypt using private key
+    global $privatekey;
+    openssl_private_decrypt(base64_decode($cipherValues[0]), $decryptedAesKey, $privatekey, OPENSSL_PKCS1_PADDING);
+    echo "AES key: ",base64_encode($decryptedAesKey),"\n\n";
+    // Extract the initialization vector required for AES decryption
+    $iv = substr(base64_decode(end($cipherValues)), 0, 16);
+    // Decrypt using AES with CBC mode, PKCS5 padding, and the extracted IV
+    $decryptedData = openssl_decrypt(end($cipherValues), 'aes-128-cbc', $decryptedAesKey, 0, $iv);
+    $responseXML = substr($decryptedData, 16);
 
-    // default works for info, getTypeInfo, delete, submit, download
-    default:
-      $headers = [
-          'Content-Type: text/xml;charset=UTF-8',
-          // 'Connection: Keep-Alive',
-      ];
-      break;
+    if (count($cipherValues) > 2) { // for download method
+    openssl_private_decrypt(base64_decode($cipherValues[1]), $decryptedAesKey, $privatekey, OPENSSL_PKCS1_PADDING);
+    echo "AES key: ",base64_encode($decryptedAesKey),"\n\n";
+
+    // Define the regular expression pattern
+    $pattern = "/Content-Type: application\/octet-stream(.*?)--MIMEBoundary/s";
+    // Perform the regular expression match
+    preg_match($pattern, $response, $matches);
+    $attachmentpart = $matches[1];
+    $binaryAttachment = substr($attachmentpart, strpos($attachmentpart, "apache.org>\r\n\r\n") + 15);
+    // Extract the initialization vector required for AES decryption
+    // $binaryAttachment = base64_decode($binaryAttachment);
+    $iv = substr(base64_decode($binaryAttachment), 0, 16);
+      echo $binaryAttachment . "\n============\n";
+    $decryptedData = openssl_decrypt($binaryAttachment, 'aes-128-cbc', $decryptedAesKey, 0, $iv);
+    echo $decryptedData;
+    }
+
+    buildResponseObj($responseXML);
+      return $responseXML;
+  } else {
+      //error handling
+      // echo "Ciphervalue not found. Nothing to decrypt here.\n";
+      // echo "Raw response received from server:\n\n";
+      global $response;
+      return $response[1];
   }
-
-  file_put_contents('rawrequest.txt', $xmlPayload);
-  // exit("rawrequest exported");
-
-  // Initialize cURL session
-  $ch = curl_init($url);
-
-  // Set cURL options
-  curl_setopt($ch, CURLOPT_POST, true);
-  curl_setopt($ch, CURLOPT_POSTFIELDS, $xmlPayload);
-  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-  curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
-  // visit endpoint url in chrome, download certificates from chrome
-  // including Certificate Authority G2, intermediate L1K and server certificate
-  // open all three in notepad and paste together, save as cacert.pem
-  curl_setopt($ch, CURLOPT_CAINFO, 'cacert.pem');
-  // set option to track request header in curl_getinfo
-  curl_setopt($ch, CURLINFO_HEADER_OUT, true);
-  // set option to include response header in $response
-  curl_setopt($ch, CURLOPT_HEADER, true);
-
-  // Execute cURL session
-  $response = curl_exec($ch);
-
-/*  // echo $response . "\n\n";
-  $pattern = '/<xenc:CipherValue>(.*?)<\/xenc:CipherValue>/s';
-  preg_match_all($pattern, $response, $matches);
-  $cipherValue = $matches[1][1];
-  global $privatekey;
-  openssl_private_decrypt(base64_decode($cipherValue), $decryptedAesKey, $privatekey, OPENSSL_PKCS1_PADDING);
-  echo "AES key: ",base64_encode($decryptedAesKey),"\n\n";
-
-  // Use Mimey to parse MIME message
-  $mimeTypes = new MimeTypes();
-  $mimeMessage = Mimey\MimeMessage::fromString($response);
-  // Get parts of the MIME message
-  $parts = $mimeMessage->getParts();
-
-  // Loop through parts to find the binary attachment
-  foreach ($parts as $part) {
-      // Check if the part is the binary attachment
-      if ($part->getHeader('Content-Type') === 'application/octet-stream') {
-          // $part->getContent() contains the binary data
-          $binaryAttachment = $part->getContent();
-          break;
-      }
-  }
-  echo $binaryAttachment . "\n\n";
-  $decryptedAttachment = openssl_decrypt($binaryAttachment, 'aes-128-cbc', $decryptedAesKey, OPENSSL_RAW_DATA);
-  echo $decryptedAttachment . "\n------------\n";
-
-$attachmentStart = strpos($response, 'Content-Type: application/octet-stream');
-$attachmentStart = strpos($response, "apache.org>", $attachmentStart)+15;
-$attachmentEnd = strpos($response, '--MIMEBoundary_', $attachmentStart);
-$encryptedAttachment = substr($response, $attachmentStart, $attachmentEnd - $attachmentStart);
-$decryptedAttachment = openssl_decrypt($encryptedAttachment, 'aes-128-cbc', $decryptedAesKey, OPENSSL_RAW_DATA);
-echo $decryptedAttachment . "\n------------\n";
-
-// Now $decryptedAttachment contains the decrypted binary data
-*/
-
-  // Check for cURL errors
-  if (curl_errno($ch)) {
-      echo 'Curl error: ' . curl_error($ch);
-  }
-
-  // print_r(curl_getinfo($ch)); //for debug
-  $serverStatus = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-  // request headers
-
-  // Create and open a file for writing verbose output
-  $httpLogFile = fopen('httplog.txt', 'w');
-  // Write request headers to the log file
-  fwrite($httpLogFile, curl_getinfo($ch, CURLINFO_HEADER_OUT));
-  fwrite($httpLogFile, $xmlPayload."\n\n\n");
-
-  // Extract body from the response
-  $body = substr($response, curl_getinfo($ch, CURLINFO_HEADER_SIZE));
-  fwrite($httpLogFile, $response);
-  // Close the file handle for http log
-  fclose($httpLogFile);
-
-  // Close cURL session
-  curl_close($ch);
-
-  // Output the response
-  return [$serverStatus,$body];
 }
-// function decryptResponse($response) {
-//   // input encrypted server response, output decrypted result XML
-//   // first need to extract xml from MIME message for the download method
-//   // Define the pattern to extract content between <soapenv> tags
-//   $pattern = '/<soapenv:Envelope[^>]*>.*?<\/soapenv:Envelope>/s';
-//   // Perform the regular expression match
-//   preg_match($pattern, $response, $matches);
-//   // Extracted content between and including <soapenv> tags
-//   $soapenvContent = $matches[0];
-//   // Now, you can create SimpleXML object from $soapenvContent
-//   $xml = simplexml_load_string($soapenvContent);
-
-//   // Register the 'xenc' namespace
-//   $xml->registerXPathNamespace('xenc', 'http://www.w3.org/2001/04/xmlenc#');
-
-//   // Use XPath to select the CipherValue
-//   $cipherValues = $xml->xpath('//xenc:CipherValue');
-
-//   // Check if CipherValues were found
-//   if (!empty($cipherValues)) {
-//     // Decrypt using private key
-//     global $privatekey;
-//     openssl_private_decrypt(base64_decode($cipherValues[0]), $decryptedAesKey, $privatekey, OPENSSL_PKCS1_PADDING);
-//     echo "AES key: ",base64_encode($decryptedAesKey),"\n\n";
-//     // Extract the initialization vector required for AES decryption
-//     $iv = substr(base64_decode(end($cipherValues)), 0, 16);
-//     // Decrypt using AES with CBC mode, PKCS5 padding, and the extracted IV
-//     $decryptedData = openssl_decrypt(end($cipherValues), 'aes-128-cbc', $decryptedAesKey, 0, $iv);
-//     $responseXML = substr($decryptedData, 16);
-
-//     if (count($cipherValues) > 2) { // for download method
-//     openssl_private_decrypt(base64_decode($cipherValues[1]), $decryptedAesKey, $privatekey, OPENSSL_PKCS1_PADDING);
-//     echo "AES key: ",base64_encode($decryptedAesKey),"\n\n";
-
-//     // Define the regular expression pattern
-//     $pattern = "/Content-Type: application\/octet-stream(.*?)--MIMEBoundary/s";
-//     // Perform the regular expression match
-//     preg_match($pattern, $response, $matches);
-//     $attachmentpart = $matches[1];
-//     $binaryAttachment = substr($attachmentpart, strpos($attachmentpart, "apache.org>\r\n\r\n") + 15);
-//     // Extract the initialization vector required for AES decryption
-//     // $binaryAttachment = base64_decode($binaryAttachment);
-//     $iv = substr(base64_decode($binaryAttachment), 0, 16);
-//       echo $binaryAttachment . "\n============\n";
-//     $decryptedData = openssl_decrypt($binaryAttachment, 'aes-128-cbc', $decryptedAesKey, 0, $iv);
-//     echo $decryptedData;
-//     }
-
-//     buildResponseObj($responseXML);
-//       return $responseXML;
-//   } else {
-//       //error handling
-//       // echo "Ciphervalue not found. Nothing to decrypt here.\n";
-//       // echo "Raw response received from server:\n\n";
-//       global $response;
-//       return $response[1];
-//   }
-// }
+*/
 
 function buildResponseObj($decryptedResult) {
   // Parse the XML

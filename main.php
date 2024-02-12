@@ -1,6 +1,6 @@
 <?php
-include_once 'request_functions.php';
-include_once 'response_to_file.php';
+include_once 'MCEDT/request_functions.php';
+include_once 'MCEDT/response_to_file.php';
 
 ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
 // this API takes POST input with a specified method and output server response as decrypted XML
@@ -53,9 +53,10 @@ global $response;
 // echo $serverStatus."\n\n";
 // echo 'Body\n'.$body."\n\n"; //for debugging
 list($serverStatus,$response) = sendrequest($rawxml);
-file_put_contents('soap_response.pickle', serialize($response));
+
+// file_put_contents('soap_response.pickle', serialize($response));
 // Save the SOAP response to a file
-file_put_contents('soap_response.xml', $response);
+// file_put_contents('soap_response.xml', $response);
 // echo out the response to console
 // echo "\nServerStatus= ".$response[0]."\n\n\n"; //for debugging
 // echo $response[1]."\n\n\n"; // for debugging
@@ -70,6 +71,7 @@ if ($serverStatus == 200){
   switch ($method) {
     case 'download':  list($decryptedResult,$decrypted_attachment)=decryptResponse($response,$privatekey);
     echo $decryptedResult;
+    buildResponseObj($decryptedResult);
     // echo "\nDecrypted Attachment:\n$decrypted_attachment\n";
     $xml = simplexml_load_string($decryptedResult);
     // get_content_from_xml_1($xml);
@@ -79,7 +81,8 @@ if ($serverStatus == 200){
     default:
       $decryptedResult = decryptResponse_1($response,$privatekey);
     echo $decryptedResult;
-    $xml = simplexml_load_string($decryptedResult);
+    buildResponseObj($decryptedResult);
+    // $xml = simplexml_load_string($decryptedResult);
     // get_content_from_xml_1($xml);
       break;
   }

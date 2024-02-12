@@ -1,5 +1,5 @@
 <?php
-
+/* these functions written by John were never called.
 function response_to_file($xmlFilePath,$txtFilePath) {
 // Load the XML file
 // $xmlFilePath = 'getTypelist first valid response 2023-12-24.xml'; // Replace with your XML file path
@@ -82,6 +82,7 @@ function get_element_from_xml($data,$number, $i) {
   }
   return $content;
 }
+*/
 function get_content_from_xml($xml,$content_name) {
   foreach ($xml->children() as $data) {
       $childCount = count($data);

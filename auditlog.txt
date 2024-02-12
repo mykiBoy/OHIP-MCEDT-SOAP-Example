@@ -595,3 +595,10 @@ Code: IEDTS0001
 Description: BA012345.123
 ResourceID: 83549
 ===========================
+Request AuditID: 56e24430-5756-ad38-a0f9-d7762790034c
+Response AuditID: 93f67871-1fb4-4d6d-8398-1aa902126c82
+Message: Success
+Code: IEDTS0001
+Description: PA123456.123
+ResourceID: 83445
+===========================
