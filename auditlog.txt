@@ -602,3 +602,10 @@ Code: IEDTS0001
 Description: PA123456.123
 ResourceID: 83445
 ===========================
+Request AuditID: c798f9e1-99d6-fb22-e903-3fe9335e68a3
+Response AuditID: d49a97ac-c71d-42d7-b9b6-1c8d5775821c
+Message: Success
+Code: IEDTS0001
+Description: PA123456.123
+ResourceID: 83445
+===========================

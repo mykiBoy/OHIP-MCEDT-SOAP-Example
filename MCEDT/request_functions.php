@@ -410,7 +410,7 @@ function sendrequest($xmlPayload) {
       break;
   }
 
-  file_put_contents('rawrequest.txt', $xmlPayload);
+  // file_put_contents('rawrequest.txt', $xmlPayload);
   // exit("rawrequest exported");
 
   // Initialize cURL session
