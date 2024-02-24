@@ -770,7 +770,7 @@ function decryptAttachmentModeCBCNoDecode($attachmentAesKey, $rawResponse)
 
     // echo "\n===============\n", utf8_decode($plaintext);
   // file_put_contents('attachment.txt', utf8_decode($plaintext));
-  return utf8_decode($plaintext);
+  return $plaintext;
 }
 
 

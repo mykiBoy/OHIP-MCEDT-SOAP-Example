@@ -609,3 +609,324 @@ Code: IEDTS0001
 Description: PA123456.123
 ResourceID: 83445
 ===========================
+Request AuditID: 884ea204-b472-7664-ba6e-73c10cc303f7
+Response AuditID: 4c245c3c-6131-4be1-94c5-e5110a6cb626
+Message: Success
+Code: IEDTS0001
+Description: PA123456.123
+ResourceID: 83445
+===========================
+Request AuditID: 93cafc67-d615-e3fc-b4c4-c51d75101bb4
+Response AuditID: 9570179c-e036-404c-8e98-7d49237203c0
+Message: Success
+Code: IEDTS0001
+Description: PA123456.123
+ResourceID: 83445
+===========================
+Request AuditID: ba84b65f-ddc7-f095-535e-82476b5ec497
+Response AuditID: 82512ec4-51ae-44ef-b343-3f7df30deaf0
+Message: Success
+Code: IEDTS0001
+Description: BA012345.123
+ResourceID: 83549
+===========================
+Request AuditID: da0bde48-6cde-f253-f1fd-1d5d86daa299
+Response AuditID: 4e4da8a1-6a33-44fa-9397-0357e334bce0
+Message: Success
+Code: IEDTS0001
+Description: HA012345.124
+ResourceID: 83447
+===========================
+Request AuditID: 9bcd38fd-751c-46bd-5667-37ff3da86d44
+Response AuditID: 1de4de17-6846-4135-8b81-bfc8fd5b2371
+Message: Success
+Code: IEDTS0001
+Description: OCT2011.pdf
+ResourceID: 83450
+===========================
+Request AuditID: 11fed5a8-7c5c-7f5f-d4dd-9cfb19d8c704
+Response AuditID: 6ac09b6e-7723-4c4b-879c-913c0325ac5e
+Message: The resource is not in the upload status so cannot be deleted
+Code: EEDTS0057
+===========================
+Request AuditID: ad0858c8-85c3-f186-ca7a-8e1244efa640
+Response AuditID: e3ab3ed3-288a-42ac-9ea5-d6e21cc99e7d
+Message: Success
+Code: IEDTS0001
+Status: DELETED
+Description: Claim_File.txt
+ResourceID: 83453
+===========================
+Request AuditID: 67793086-fa70-fe10-f474-9a0194d84dea
+Response AuditID: d5880fc5-d34c-434f-b08c-e25e87449796
+Message: The resource is not in the upload status so cannot be deleted
+Code: EEDTS0057
+===========================
+Request AuditID: a909494d-b289-747a-6d5d-1791693f3fcb
+Response AuditID: eeae7921-9c76-442a-9fe9-69f13daf753a
+Message: User that is deleting the resource is not the same as the user that uploaded it
+Code: EEDTS0058
+===========================
+Request AuditID: 49d9ec87-cf39-1b93-8be7-d3587ec7b000
+Response AuditID: 99d6b420-eb24-4c12-8835-9f4173df2d4e
+Message: The resource id specified cannot be found.
+Code: EEDTS0056
+===========================
+Request AuditID: dda43721-35f7-665e-f15f-3f9167fa37b0
+Response AuditID: cf2b0b39-298e-4393-811e-a16ebd69b2af
+Message: Success
+Code: IEDTS0001
+Description: 
+ResourceID: 
+===========================
+Request AuditID: b7755df7-3497-3b3f-d9fc-b13605c8399e
+Response AuditID: 5ad7ddfc-987c-4ba6-ae74-452a49a3ae23
+Message: Success
+Code: IEDTS0001
+Status: UPLOADED
+Description: Claim_File.txt
+ResourceID: 83457
+===========================
+Request AuditID: 4b4661c2-f15b-1ffa-d426-840f3bcfbb00
+Response AuditID: cf54cb28-d56d-4391-8204-a6cb6ad34986
+Message: Success
+Code: IEDTS0001
+Description: OBEC01.001
+ResourceID: 83449
+===========================
+Request AuditID: 0f52d484-54d7-27d0-9ff3-88ec641d433a
+Response AuditID: bc996f17-bb2d-4752-8ea2-e7945e2a8ecd
+Message: Success
+Code: IEDTS0001
+Description: OBECFILE.blob
+ResourceID: 83542
+===========================
+Request AuditID: 66338872-948e-fa69-4e0f-8cba38351f61
+Response AuditID: 9287bb1f-baa0-42d1-8e99-80ba72b96702
+Message: Success
+Code: IEDTS0001
+Status: UPLOADED
+Description: OBECFILE.blob
+ResourceID: 83542
+===========================
+Request AuditID: 9850134f-2f1a-8cb7-ef0d-a89fca5124ae
+Response AuditID: 7ca5a621-8e5b-4b46-a912-3341e545ac6e
+Message: Claim File must be 79 bytes
+Code: ECLAM0008
+===========================
+Request AuditID: fcb40c2f-f33e-af0e-4367-e06ecfd47d33
+Response AuditID: 2ed1cd1a-5e4c-464e-bb78-046ad7bd2dc7
+Message: Invalid Claim File format
+Code: ECLAM0009
+===========================
+Request AuditID: 83253f96-d1af-4008-92a3-f44db8098afa
+Response AuditID: fc2ed9bd-83b4-4585-83d8-e6792168b1e9
+Message: Success
+Code: IEDTS0001
+Status: UPLOADED
+Description: Stale_Dated_Claim_File.txt
+ResourceID: 84230
+===========================
+Request AuditID: a2500e7d-b767-3ad1-173b-c23ebcb0e82f
+Response AuditID: a381f55a-3a03-4414-9197-d6c25aa1ec51
+Message: User that is updating the resource is not the same as the user that uploaded it
+Code: EEDTS0060
+===========================
+Request AuditID: d42b7bc1-60db-670e-a141-f5e14ebf3302
+Response AuditID: e7fba477-7634-4749-9f6d-ebac8786c125
+Message: The resource is not in the upload status so cannot be updated
+Code: EEDTS0059
+===========================
+Request AuditID: 707ddc54-dceb-eb29-ee28-17d22027df90
+Response AuditID: 115ce097-3666-47ac-8ee7-82796b917764
+Message: The resource id specified cannot be found.
+Code: EEDTS0056
+===========================
+Request AuditID: f7ab57a9-7e82-56e0-11ce-6d710ad59261
+Response AuditID: 14fe826f-cbaa-4a95-a890-d0da5d2ba2c6
+Message: Claim File must be 79 bytes
+Code: ECLAM0008
+===========================
+Request AuditID: 226b5cb1-319b-e3f0-0e5e-436e82f74e0a
+Response AuditID: 243412ea-1ff0-48d2-9e9b-77004bede665
+Message: Mal Formed Trailer. Claim Header - 2 header count does not match number of Claim Header - 2 headers in batch
+Code: ECLAM0006
+===========================
+Request AuditID: 1a9dd118-3c13-c469-175e-57078125c450
+Response AuditID: f5551fe5-195b-4137-8bce-405d681faec4
+Message: Mal Formed Trailer. Claim Header - 2 header count does not match number of Claim Header - 2 headers in batch
+Code: ECLAM0006
+===========================
+Request AuditID: 2ce1d716-401e-c6df-0ba3-c911949131c8
+Response AuditID: a36204d9-2076-4198-8494-7910102e04b9
+Message: Claim File must be 79 bytes
+Code: ECLAM0008
+===========================
+Request AuditID: 58b10236-9c2b-585c-3337-54d954941959
+Response AuditID: 502b901a-c071-47c9-bc2f-11026c0912a9
+Message: Invalid Claim File format
+Code: ECLAM0009
+===========================
+Request AuditID: 7b557a18-2204-bd1d-3c73-2faeafad582e
+Response AuditID: d026baec-d62c-4613-8023-cc1238da9dc3
+Message: Invalid Claim File format
+Code: ECLAM0009
+===========================
+Request AuditID: 7ac8f019-29e9-116a-7a9f-bfbc9ef966a8
+Response AuditID: 0b43c902-f11b-4f13-a01b-bd85d37d5874
+Message: Mal Formed Trailer. Claim Header - 2 header count does not match number of Claim Header - 2 headers in batch
+Code: ECLAM0006
+===========================
+Request AuditID: 1f9b1513-b5c5-5625-1e66-11e725997b8f
+Response AuditID: 98804262-1e58-4385-8989-3600e751075d
+Message: Mal Formed Trailer. Claim Header - 2 header count does not match number of Claim Header - 2 headers in batch
+Code: ECLAM0006
+===========================
+Request AuditID: 8074f2b7-e13c-313f-fd9e-00dfeb68d8c1
+Response AuditID: bac3ad3b-faed-46aa-9783-ea0586b3d0cd
+Message: Mal Formed Header
+Code: ECLAM0002
+===========================
+Request AuditID: b831e1bb-8597-e2bb-6464-2b4f1383854b
+Response AuditID: dbd1a0bb-ec70-4778-b0ae-a717b78ccf87
+Message: Mal Formed Trailer. Claim Header - 2 header count does not match number of Claim Header - 2 headers in batch
+Code: ECLAM0006
+===========================
+Request AuditID: d8dbe109-d156-aace-2119-b0f5825893cb
+Response AuditID: 32a8a63f-c9a9-4b67-8803-5ad860dcbc0b
+Message: Mal Formed Trailer. Item Record count does not match number of Item Records in batch
+Code: ECLAM0007
+===========================
+Request AuditID: 1fdb98cf-2537-9da1-309c-fd7c4562a455
+Response AuditID: bf696285-bfeb-479f-b87d-45a67d54e211
+Message: Mal Formed Trailer. Item Record count does not match number of Item Records in batch
+Code: ECLAM0007
+===========================
+Request AuditID: 8d56f576-cb59-d113-4915-414614ca9265
+Response AuditID: d91ad82b-5768-4e59-8f57-c6f7f9935d51
+Message: Success
+Code: IEDTS0001
+Status: UPLOADED
+Description: Claim_File (invalid).txt
+ResourceID: 83547
+===========================
+Request AuditID: 4fc85f36-9fa3-c914-4d43-0207459bfb16
+Response AuditID: fb95e54e-9db2-4009-9097-4ff0f2dd9790
+Message: Success
+Code: IEDTS0001
+Status: UPLOADED
+Description: Claim_File.txt
+ResourceID: 83452
+===========================
+Request AuditID: 83b89cd5-a28d-aaa8-b9d7-26ac18f4b0b5
+Response AuditID: e7a7da4e-09ce-4f6c-abcf-d87488565866
+Message: Success
+Code: IEDTS0001
+Status: DOWNLOADABLE
+Description: BA012345.123
+ResourceID: 83549
+===========================
+Request AuditID: 8cca29ae-17a0-1a4d-8158-4c0cfa952eb1
+Response AuditID: f26bd028-dc21-461d-8532-db12e83e09e5
+Message: The resource id specified cannot be found.
+Code: EEDTS0056
+===========================
+Request AuditID: 699f2645-6e4d-51ea-5b94-e9739d1a74b2
+Response AuditID: 4c80def2-cb82-40f3-ad5f-d9cf196d0d2e
+Message: Success
+Code: IEDTS0001
+Status: UPLOADED
+Description: Claim_File (invalid).txt
+ResourceID: 83547
+Result Size: 2
+===========================
+Request AuditID: e86fd000-d46d-6e1f-720d-ac9e95036fc8
+Response AuditID: 889aa69f-df3d-4f61-a563-f086b3c19220
+Message: Success
+Code: IEDTS0001
+Description: HA801284.021
+ResourceID: 83784
+===========================
+Request AuditID: 74ffc2ed-557d-b463-ba59-f07ae5a15b5a
+Response AuditID: 9b2926eb-bd41-4bdd-930d-0a4ee6c831ee
+Message: Invalid Claim File format
+Code: ECLAM0009
+===========================
+Request AuditID: 64a679cc-d2be-9552-3b31-4808502618a4
+Response AuditID: b3169455-3742-4673-8898-5c5a79c9cec1
+Message: Missing Billing Number in the header
+Code: ECLAM0003
+===========================
+Request AuditID: e9c5f5c8-2d2a-7cbe-10e2-3696eca81207
+Response AuditID: 0dbd83b0-6db0-4501-abe7-b9e990701dd9
+Message: Mal Formed Trailer. Claim Header - 1 header count does not match number of Claim Header - 1 headers in batch
+Code: ECLAM0005
+===========================
+Request AuditID: 66e49401-3a43-4f30-ed20-dc2c27fd61ac
+Response AuditID: 48040379-b445-4fce-8144-db4ccaca6ae9
+Message: File Upload Failed
+Code: EEDTS0010
+===========================
+Request AuditID: d0afc33e-e8ae-d3ad-c1e3-2516067bc62a
+Response AuditID: ea0a4d79-e133-46b3-b904-ff5926ce8a45
+Message: File Upload Failed
+Code: EEDTS0010
+===========================
+Request AuditID: 3ea8ddaf-7ea5-0b60-4edf-062f3d602a0d
+Response AuditID: 67932f62-4920-4231-a0d4-e8cf03b7bee2
+Message: Invalid Claim File format
+Code: ECLAM0009
+===========================
+Request AuditID: 6e6c322d-0401-27c1-5600-b40aa40af38b
+Response AuditID: 72c63439-5ff6-47f9-9156-3896d16e86fa
+Message: Invalid Claim File format
+Code: ECLAM0009
+===========================
+Request AuditID: 4428739b-bc53-69a2-30b3-6fd74eccd699
+Response AuditID: febfc4a8-e1b0-446e-85ce-3eb215ad6c2b
+Message: The resource id specified cannot be found.
+Code: EEDTS0056
+===========================
+Request AuditID: 7f79d250-cc17-9328-fa27-7ae97f439e50
+Response AuditID: cb0dd40f-3725-40d3-bd99-bc64b5d94081
+Message: Success
+Code: IEDTS0001
+Status: DOWNLOADABLE
+Description: OCT2011.pdf
+ResourceID: 83450
+Result Size: 1
+===========================
+Request AuditID: 16a7cbc6-84aa-8db9-cba5-f99fb5692b7d
+Response AuditID: 7a5973ae-1002-41a7-bc0f-efb03159bde5
+Message: Success
+Code: IEDTS0001
+Status: DOWNLOADABLE
+Description: OCT2011.pdf
+ResourceID: 83450
+===========================
+Request AuditID: a7025168-5985-144a-844c-4a77c41a038b
+Response AuditID: f5581efc-bec6-4b77-8c1b-a92e800699ca
+Message: Success
+Code: IEDTS0001
+Status: DOWNLOADABLE
+Description: OCT2011.pdf
+ResourceID: 83450
+Result Size: 1
+===========================
+Request AuditID: ef9e4004-cb76-712c-15ca-91f5e7744683
+Response AuditID: 44e81abb-c37a-4ce0-932b-e012fbb91fa3
+Message: The resource id specified cannot be found.
+Code: EEDTS0056
+===========================
+Request AuditID: 74e6f5dd-b303-051b-e35f-a9b375087507
+Response AuditID: 6c1e8969-eb25-40de-abdd-c8638558cb81
+Message: The resource id specified cannot be found.
+Code: EEDTS0056
+===========================
+Request AuditID: ac0a5471-4842-8fca-6b85-f3952df98417
+Response AuditID: 4a86e004-fa00-4d08-b82b-3061311ad86a
+Message: Success
+Code: IEDTS0001
+Description: OCT2011.pdf
+ResourceID: 83450
+===========================

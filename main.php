@@ -9,9 +9,9 @@ ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_report
 
 global $method, $claimfile, $resourceID;
 // $method = command_menu();
-$method = 'download'; //$_POST['method']
-//getTypeList,list,info,upload,delete,update,submit,download
-$claimfile = 'trash bin/Claim_File.txt'; 
+$method = 'info'; //$_POST['method']
+//getTypeList,list,info,upload,delete,update,submit,download 
+$claimfile = 'MCEDT/Claim_File.txt'; 
 //can contain forward slash for claimfile foldername
 
 // vars needed for list method
@@ -21,8 +21,8 @@ $resourceStatus = 'DOWNLOADABLE';
 // UPLOADED, SUBMITTED, WIP, DOWNLOADABLE, APPROVED, DENIED
 // ref pg25 moh-ohip-techspec-mcedt-ebs-v4-5-en-2023-10-18.pdf
 $resourcePage = 1;
-$resourceID = "83445";
-$resourceType = 'RA'; // OPTIONAL can leave empty
+$resourceID = "83450";
+$resourceType = 'GCM'; // OPTIONAL can leave empty
 // CL, BE, ER, ES, RA, RS, PSP, GCM
 // replace with your own conformance testing credentials
 // scroll down to replace conformance testing key further down the code base
@@ -60,6 +60,8 @@ list($serverStatus,$response) = sendrequest($rawxml);
 // echo out the response to console
 // echo "\nServerStatus= ".$response[0]."\n\n\n"; //for debugging
 // echo $response[1]."\n\n\n"; // for debugging
+// echo $serverStatus."\n\n\n";
+// echo $response."\n\n\n";
 
 // $decryptedResult = decryptResponse($response[1]);
 // echo $decryptedResult; // output plain text response to console
