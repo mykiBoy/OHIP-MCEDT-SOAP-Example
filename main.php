@@ -39,6 +39,10 @@ $pkcs12 = file_get_contents('teststore.p12');
 openssl_pkcs12_read($pkcs12, $pkcs12Info, 'changeit');
 // load the private key
 $privatekey = $pkcs12Info['pkey'];
+// load the public certificate from sender, self-signed cert.
+$sender_public_cert = str_replace(array('-----BEGIN CERTIFICATE-----', '-----END CERTIFICATE-----'), '', $pkcs12Info['cert']);
+// remove unwanted linebreaks
+$sender_public_cert = preg_replace('/[\r\n]+/', '', $sender_public_cert)
 
 // create responseObj for auditlog tracking
 $responseObj = new stdClass();

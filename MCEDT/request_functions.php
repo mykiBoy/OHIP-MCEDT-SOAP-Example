@@ -313,7 +313,7 @@ openssl_sign($digest, $signature, $privatekey, OPENSSL_ALGO_SHA1);
 // Signature is now in $signature
 $signature=base64_encode($signature);
 // echo 'Signature: ', base64_encode($signature), "\n\n"; //for debug
-
+global $sender_public_cert;
 $rawxml = <<<EOT
 <soapenv:Envelope
 xmlns:ebs="http://ebs.health.ontario.ca/"
@@ -325,7 +325,7 @@ xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-ut
 <soapenv:Header>
 <wsse:Security
 xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
-<wsse:BinarySecurityToken EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" wsu:Id="X509-4A6564966742022D8B170319672914254">MIICZTCCAc6gAwIBAgIJAOfnCbp0ZcrkMA0GCSqGSIb3DQEBCwUAMGMxCzAJBgNVBAYTAkNBMRAwDgYDVQQIEwdPbnRhcmlvMRAwDgYDVQQHEwdUb3JvbnRvMQ0wCwYDVQQKEwRPSElQMQ0wCwYDVQQLEwRPSElQMRIwEAYDVQQDEwlUZXN0IENlcnQwHhcNMjMxMjIxMjEzOTA5WhcNNDMxMjE2MjEzOTA5WjBjMQswCQYDVQQGEwJDQTEQMA4GA1UECBMHT250YXJpbzEQMA4GA1UEBxMHVG9yb250bzENMAsGA1UEChMET0hJUDENMAsGA1UECxMET0hJUDESMBAGA1UEAxMJVGVzdCBDZXJ0MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCW0yRHATronyEOqxrh7y7jN1Va+8jAOfnY/NPMvrLmo6w8cWPfzroTx6+R7sOTiH63TlyDYR3H9POi1rrx5FePU267hZdSFBA8Yz93MTdaCb6eHtm/OqwYVQjq5hOmwInOWzY6GEDQO97MQ4SvXo9zU+TcoKHEL0XZDqD/NbcEYQIDAQABoyEwHzAdBgNVHQ4EFgQUyarNiRTnydza4ifUBwZENxn9m1swDQYJKoZIhvcNAQELBQADgYEAa6sWLouZO3yL+9qZz0h0lnUHODj2Xg6J8j6Rg3Yah+0V90qkrbR4IdnbNFivW1zBkzxSOP12Tj8xiaYQ93lf6NVYcHJI1UXM8p4YTM9QVVy+wXPdoxKD7wCbqw5opDc7uTd7CBqfzqsl6BTqpNVN5DVvVaYkl5fWTLSqvD/YrTU=</wsse:BinarySecurityToken>
+<wsse:BinarySecurityToken EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" wsu:Id="X509-4A6564966742022D8B170319672914254">$sender_public_cert</wsse:BinarySecurityToken>
 $usernameToken
 $timestamp
 <ds:Signature Id="SIG-6" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
